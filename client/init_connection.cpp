@@ -31,7 +31,7 @@ int main(void){
     }
 
     char message[11] = "Helloworld";
-    char response[10];
+   // char response[10];
     for(int i=0;i<10;i++){
         if (write(clientId, message, 10) == -1) {
             perror("Write failed");
