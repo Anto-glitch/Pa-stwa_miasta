@@ -3,6 +3,10 @@ client: \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o \
   CMakeFiles/client.dir/client/init_connection.cpp.o \
+  /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.3.0.2 \
+  /usr/lib/x86_64-linux-gnu/libsfml-window.so.3.0.2 \
+  /usr/lib/x86_64-linux-gnu/libsfml-network.so.3.0.2 \
+  /usr/lib/x86_64-linux-gnu/libsfml-system.so.3.0.2 \
   /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/libm.so \
@@ -38,6 +42,14 @@ client: \
 /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o:
 
 CMakeFiles/client.dir/client/init_connection.cpp.o:
+
+/usr/lib/x86_64-linux-gnu/libsfml-graphics.so.3.0.2:
+
+/usr/lib/x86_64-linux-gnu/libsfml-window.so.3.0.2:
+
+/usr/lib/x86_64-linux-gnu/libsfml-network.so.3.0.2:
+
+/usr/lib/x86_64-linux-gnu/libsfml-system.so.3.0.2:
 
 /usr/lib/gcc/x86_64-linux-gnu/15/libstdc++.so:
 

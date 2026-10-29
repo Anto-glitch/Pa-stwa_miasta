@@ -20,6 +20,7 @@ events:
     names:
       - "uname"
     candidate_directories:
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -28,16 +29,38 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     searched_directories:
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/uname"
       - "/usr/local/sbin/uname"
       - "/usr/local/bin/uname"
       - "/usr/sbin/uname"
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -46,17 +69,36 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "message-v1"
     backtrace:
       - "/usr/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Linux - 7.0.0-38-generic - x86_64
+      The system is: Linux - 6.18.54.1-microsoft-standard-WSL2 - x86_64
   -
     kind: "find-v1"
     backtrace:
@@ -78,6 +120,7 @@ events:
       - "make"
       - "smake"
     candidate_directories:
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -86,16 +129,38 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     searched_directories:
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/gmake"
       - "/usr/local/sbin/gmake"
       - "/usr/local/bin/gmake"
       - "/usr/sbin/gmake"
     found: "/usr/bin/gmake"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -104,10 +169,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -134,6 +218,7 @@ events:
       - "icx"
       - "clang"
     candidate_directories:
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -142,16 +227,38 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     searched_directories:
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/cc"
       - "/usr/local/sbin/cc"
       - "/usr/local/bin/cc"
       - "/usr/sbin/cc"
     found: "/usr/bin/cc"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -160,10 +267,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -191,6 +317,7 @@ events:
     found: "/usr/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -199,10 +326,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "message-v1"
     backtrace:
@@ -223,7 +369,7 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/4.2.3/CompilerIdC/a.out
+        /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/4.2.3/CompilerIdC/a.out
       
   -
     kind: "find-v1"
@@ -246,6 +392,7 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -253,12 +400,33 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -267,10 +435,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -292,6 +479,7 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -299,12 +487,33 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -313,10 +522,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -338,6 +566,7 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -345,12 +574,33 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -359,10 +609,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -384,6 +653,7 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -391,12 +661,33 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -405,10 +696,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -430,6 +740,7 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -437,12 +748,33 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -451,10 +783,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -476,6 +827,7 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -483,12 +835,33 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -497,10 +870,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -522,6 +914,7 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -529,12 +922,33 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     found: "/usr/bin/objcopy"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -543,10 +957,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -568,6 +1001,7 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -575,12 +1009,33 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     found: "/usr/bin/readelf"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -589,10 +1044,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -614,6 +1088,7 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -621,11 +1096,32 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/dlltool"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/dlltool"
       - "/usr/local/sbin/dlltool"
       - "/usr/local/bin/dlltool"
       - "/usr/sbin/dlltool"
@@ -633,12 +1129,33 @@ events:
       - "/bin/dlltool"
       - "/usr/games/dlltool"
       - "/usr/local/games/dlltool"
+      - "/usr/lib/wsl/lib/dlltool"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/dlltool"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/dlltool"
+      - "/mnt/c/WINDOWS/system32/dlltool"
+      - "/mnt/c/WINDOWS/dlltool"
+      - "/mnt/c/WINDOWS/System32/Wbem/dlltool"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/dlltool"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/dlltool"
+      - "/mnt/c/Program Files/Git/cmd/dlltool"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/dlltool"
+      - "/mnt/c/Program Files/CMake/bin/dlltool"
+      - "/mnt/c/Program Files/nodejs/dlltool"
+      - "/mnt/c/Program Files/WSL/dlltool"
+      - "/mnt/c/Users/antma/.local/bin/dlltool"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/dlltool"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/dlltool"
+      - "/mnt/c/Users/antma/.bun/bin/dlltool"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/dlltool"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/dlltool"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/dlltool"
       - "/snap/bin/dlltool"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/dlltool"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/dlltool"
     found: false
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -647,10 +1164,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -672,6 +1208,7 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -679,12 +1216,33 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     found: "/usr/bin/addr2line"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -693,10 +1251,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -718,6 +1295,7 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -725,11 +1303,32 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/tapi"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/tapi"
       - "/usr/local/sbin/tapi"
       - "/usr/local/bin/tapi"
       - "/usr/sbin/tapi"
@@ -737,12 +1336,33 @@ events:
       - "/bin/tapi"
       - "/usr/games/tapi"
       - "/usr/local/games/tapi"
+      - "/usr/lib/wsl/lib/tapi"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/tapi"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/tapi"
+      - "/mnt/c/WINDOWS/system32/tapi"
+      - "/mnt/c/WINDOWS/tapi"
+      - "/mnt/c/WINDOWS/System32/Wbem/tapi"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/tapi"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/tapi"
+      - "/mnt/c/Program Files/Git/cmd/tapi"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/tapi"
+      - "/mnt/c/Program Files/CMake/bin/tapi"
+      - "/mnt/c/Program Files/nodejs/tapi"
+      - "/mnt/c/Program Files/WSL/tapi"
+      - "/mnt/c/Users/antma/.local/bin/tapi"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/tapi"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
+      - "/mnt/c/Users/antma/.bun/bin/tapi"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/tapi"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/tapi"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/tapi"
       - "/snap/bin/tapi"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/tapi"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/tapi"
     found: false
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -751,10 +1371,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -779,6 +1418,7 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -786,11 +1426,32 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/gcc-ar-15.2"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/gcc-ar-15.2"
       - "/usr/local/sbin/gcc-ar-15.2"
       - "/usr/local/bin/gcc-ar-15.2"
       - "/usr/sbin/gcc-ar-15.2"
@@ -798,12 +1459,33 @@ events:
       - "/bin/gcc-ar-15.2"
       - "/usr/games/gcc-ar-15.2"
       - "/usr/local/games/gcc-ar-15.2"
+      - "/usr/lib/wsl/lib/gcc-ar-15.2"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/gcc-ar-15.2"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/gcc-ar-15.2"
+      - "/mnt/c/WINDOWS/system32/gcc-ar-15.2"
+      - "/mnt/c/WINDOWS/gcc-ar-15.2"
+      - "/mnt/c/WINDOWS/System32/Wbem/gcc-ar-15.2"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/gcc-ar-15.2"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/gcc-ar-15.2"
+      - "/mnt/c/Program Files/Git/cmd/gcc-ar-15.2"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar-15.2"
+      - "/mnt/c/Program Files/CMake/bin/gcc-ar-15.2"
+      - "/mnt/c/Program Files/nodejs/gcc-ar-15.2"
+      - "/mnt/c/Program Files/WSL/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/.local/bin/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/.bun/bin/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar-15.2"
       - "/snap/bin/gcc-ar-15.2"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/gcc-ar-15.2"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/gcc-ar-15.2"
     found: "/usr/bin/gcc-ar-15"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -812,10 +1494,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -840,6 +1541,7 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -847,11 +1549,32 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/gcc-ranlib-15.2"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/gcc-ranlib-15.2"
       - "/usr/local/sbin/gcc-ranlib-15.2"
       - "/usr/local/bin/gcc-ranlib-15.2"
       - "/usr/sbin/gcc-ranlib-15.2"
@@ -859,12 +1582,33 @@ events:
       - "/bin/gcc-ranlib-15.2"
       - "/usr/games/gcc-ranlib-15.2"
       - "/usr/local/games/gcc-ranlib-15.2"
+      - "/usr/lib/wsl/lib/gcc-ranlib-15.2"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/gcc-ranlib-15.2"
+      - "/mnt/c/WINDOWS/system32/gcc-ranlib-15.2"
+      - "/mnt/c/WINDOWS/gcc-ranlib-15.2"
+      - "/mnt/c/WINDOWS/System32/Wbem/gcc-ranlib-15.2"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/gcc-ranlib-15.2"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/Git/cmd/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/CMake/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/nodejs/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/WSL/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/.local/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/.bun/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib-15.2"
       - "/snap/bin/gcc-ranlib-15.2"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/gcc-ranlib-15.2"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/gcc-ranlib-15.2"
     found: "/usr/bin/gcc-ranlib-15"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -873,10 +1617,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -910,6 +1673,7 @@ events:
     found: "/usr/bin/c++"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -918,10 +1682,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -949,6 +1732,7 @@ events:
     found: "/usr/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -957,10 +1741,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "message-v1"
     backtrace:
@@ -981,7 +1784,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/4.2.3/CompilerIdCXX/a.out
+        /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/4.2.3/CompilerIdCXX/a.out
       
   -
     kind: "find-v1"
@@ -1007,6 +1810,7 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -1014,11 +1818,32 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/gcc-ar-15.2"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/gcc-ar-15.2"
       - "/usr/local/sbin/gcc-ar-15.2"
       - "/usr/local/bin/gcc-ar-15.2"
       - "/usr/sbin/gcc-ar-15.2"
@@ -1026,12 +1851,33 @@ events:
       - "/bin/gcc-ar-15.2"
       - "/usr/games/gcc-ar-15.2"
       - "/usr/local/games/gcc-ar-15.2"
+      - "/usr/lib/wsl/lib/gcc-ar-15.2"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/gcc-ar-15.2"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/gcc-ar-15.2"
+      - "/mnt/c/WINDOWS/system32/gcc-ar-15.2"
+      - "/mnt/c/WINDOWS/gcc-ar-15.2"
+      - "/mnt/c/WINDOWS/System32/Wbem/gcc-ar-15.2"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/gcc-ar-15.2"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/gcc-ar-15.2"
+      - "/mnt/c/Program Files/Git/cmd/gcc-ar-15.2"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ar-15.2"
+      - "/mnt/c/Program Files/CMake/bin/gcc-ar-15.2"
+      - "/mnt/c/Program Files/nodejs/gcc-ar-15.2"
+      - "/mnt/c/Program Files/WSL/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/.local/bin/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/.bun/bin/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/gcc-ar-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ar-15.2"
       - "/snap/bin/gcc-ar-15.2"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/gcc-ar-15.2"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-15.2"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/gcc-ar-15.2"
     found: "/usr/bin/gcc-ar-15"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1040,10 +1886,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "find-v1"
     backtrace:
@@ -1068,6 +1933,7 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "/usr/bin/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/"
       - "/usr/local/sbin/"
       - "/usr/local/bin/"
       - "/usr/sbin/"
@@ -1075,11 +1941,32 @@ events:
       - "/bin/"
       - "/usr/games/"
       - "/usr/local/games/"
+      - "/usr/lib/wsl/lib/"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/"
+      - "/mnt/c/WINDOWS/system32/"
+      - "/mnt/c/WINDOWS/"
+      - "/mnt/c/WINDOWS/System32/Wbem/"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/"
+      - "/mnt/c/Program Files/Git/cmd/"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "/mnt/c/Program Files/CMake/bin/"
+      - "/mnt/c/Program Files/nodejs/"
+      - "/mnt/c/Program Files/WSL/"
+      - "/mnt/c/Users/antma/.local/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/mnt/c/Users/antma/.bun/bin/"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/"
       - "/snap/bin/"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/gcc-ranlib-15.2"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/gcc-ranlib-15.2"
       - "/usr/local/sbin/gcc-ranlib-15.2"
       - "/usr/local/bin/gcc-ranlib-15.2"
       - "/usr/sbin/gcc-ranlib-15.2"
@@ -1087,12 +1974,33 @@ events:
       - "/bin/gcc-ranlib-15.2"
       - "/usr/games/gcc-ranlib-15.2"
       - "/usr/local/games/gcc-ranlib-15.2"
+      - "/usr/lib/wsl/lib/gcc-ranlib-15.2"
+      - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/gcc-ranlib-15.2"
+      - "/mnt/c/WINDOWS/system32/gcc-ranlib-15.2"
+      - "/mnt/c/WINDOWS/gcc-ranlib-15.2"
+      - "/mnt/c/WINDOWS/System32/Wbem/gcc-ranlib-15.2"
+      - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/gcc-ranlib-15.2"
+      - "/mnt/c/WINDOWS/System32/OpenSSH/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/Git/cmd/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/CMake/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/nodejs/gcc-ranlib-15.2"
+      - "/mnt/c/Program Files/WSL/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/.local/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/.bun/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/AppData/Roaming/npm/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Python/bin/gcc-ranlib-15.2"
+      - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim/gcc-ranlib-15.2"
       - "/snap/bin/gcc-ranlib-15.2"
-      - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
-      - "/snap/code/273/usr/share/code/bin/copilot-shim/gcc-ranlib-15.2"
+      - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-15.2"
+      - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim/gcc-ranlib-15.2"
     found: "/usr/bin/gcc-ranlib-15"
     search_context:
       ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
         - "/usr/local/sbin"
         - "/usr/local/bin"
         - "/usr/sbin"
@@ -1101,10 +2009,29 @@ events:
         - "/bin"
         - "/usr/games"
         - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
         - "/snap/bin"
-        - "/snap/bin"
-        - "/home/antek/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/snap/code/273/usr/share/code/bin/copilot-shim"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
   -
     kind: "try_compile-v1"
     backtrace:
@@ -1114,8 +2041,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-ZIscaO"
-      binary: "/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-ZIscaO"
+      source: "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-1Ef0FA"
+      binary: "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-1Ef0FA"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1124,13 +2051,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-ZIscaO'
+        Change Dir: '/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-1Ef0FA'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_63cb7/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_63cb7.dir/build.make CMakeFiles/cmTC_63cb7.dir/build
-        gmake[1]: Entering directory '/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-ZIscaO'
-        Building C object CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ce8bc/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ce8bc.dir/build.make CMakeFiles/cmTC_ce8bc.dir/build
+        gmake[1]: Entering directory '/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-1Ef0FA'
+        Building C object CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -1140,8 +2067,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_63cb7.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_63cb7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/cciWgX68.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ce8bc.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ce8bc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccl1KKD0.s
         GNU C23 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -1158,14 +2085,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: edd70396dcc669433a92073f97309866
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_63cb7.dir/'
-         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o /tmp/cciWgX68.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ce8bc.dir/'
+         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o /tmp/ccl1KKD0.s
         GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_63cb7
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63cb7.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_ce8bc
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce8bc.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper
@@ -1178,14 +2105,14 @@ events:
         gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_63cb7' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_63cb7.'
-         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWbiapP.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_63cb7 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ce8bc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ce8bc.'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRuYAp6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ce8bc /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
         collect2 version 15.2.0
-        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWbiapP.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_63cb7 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRuYAp6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ce8bc /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.46
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_63cb7' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_63cb7.'
-        /usr/bin/cc -v -Wl,-v CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o -o cmTC_63cb7
-        gmake[1]: Leaving directory '/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-ZIscaO'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ce8bc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ce8bc.'
+        /usr/bin/cc -v -Wl,-v CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o -o cmTC_ce8bc
+        gmake[1]: Leaving directory '/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-1Ef0FA'
         
       exitCode: 0
   -
@@ -1220,13 +2147,13 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-ZIscaO']
+        ignore line: [Change Dir: '/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-1Ef0FA']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_63cb7/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_63cb7.dir/build.make CMakeFiles/cmTC_63cb7.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-ZIscaO']
-        ignore line: [Building C object CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ce8bc/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_ce8bc.dir/build.make CMakeFiles/cmTC_ce8bc.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-1Ef0FA']
+        ignore line: [Building C object CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -1236,8 +2163,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_63cb7.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_63cb7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/cciWgX68.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ce8bc.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.2/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ce8bc.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccl1KKD0.s]
         ignore line: [GNU C23 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1254,14 +2181,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: edd70396dcc669433a92073f97309866]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_63cb7.dir/']
-        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o /tmp/cciWgX68.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ce8bc.dir/']
+        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o /tmp/ccl1KKD0.s]
         ignore line: [GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_63cb7]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63cb7.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_ce8bc]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce8bc.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper]
@@ -1274,13 +2201,13 @@ events:
         ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_63cb7' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_63cb7.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWbiapP.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_63cb7 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ce8bc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_ce8bc.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRuYAp6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ce8bc /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/15/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccWbiapP.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccRuYAp6.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1298,7 +2225,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_63cb7] ==> ignore
+          arg [cmTC_ce8bc] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o]
@@ -1313,7 +2240,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -1328,7 +2255,7 @@ events:
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 15.2.0]
-        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWbiapP.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_63cb7 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_63cb7.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccRuYAp6.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ce8bc /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_ce8bc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
         linker tool for 'C': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
@@ -1368,8 +2295,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-CZfS9f"
-      binary: "/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-CZfS9f"
+      source: "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-T6MEnL"
+      binary: "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-T6MEnL"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1379,13 +2306,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-CZfS9f'
+        Change Dir: '/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-T6MEnL'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8cd85/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_8cd85.dir/build.make CMakeFiles/cmTC_8cd85.dir/build
-        gmake[1]: Entering directory '/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-CZfS9f'
-        Building CXX object CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_87c94/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_87c94.dir/build.make CMakeFiles/cmTC_87c94.dir/build
+        gmake[1]: Entering directory '/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-T6MEnL'
+        Building CXX object CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -1395,8 +2322,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8cd85.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8cd85.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccg0SmeJ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_87c94.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_87c94.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccGHkpUC.s
         GNU C++17 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)
         	compiled by GNU C version 15.2.0, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version isl-0.27-GMP
         
@@ -1417,14 +2344,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: b661a74662ad7cf413c4193391ab5290
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8cd85.dir/'
-         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccg0SmeJ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_87c94.dir/'
+         /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccGHkpUC.s
         GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_8cd85
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8cd85.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_87c94
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87c94.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper
@@ -1437,14 +2364,14 @@ events:
         gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8cd85' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8cd85.'
-         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUTBWxX.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_8cd85 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_87c94' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_87c94.'
+         /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0rqOzz.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_87c94 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
         collect2 version 15.2.0
-        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUTBWxX.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_8cd85 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0rqOzz.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_87c94 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.46
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8cd85' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8cd85.'
-        /usr/bin/c++ -v -Wl,-v CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8cd85
-        gmake[1]: Leaving directory '/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-CZfS9f'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_87c94' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_87c94.'
+        /usr/bin/c++ -v -Wl,-v CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_87c94
+        gmake[1]: Leaving directory '/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-T6MEnL'
         
       exitCode: 0
   -
@@ -1485,13 +2412,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-CZfS9f']
+        ignore line: [Change Dir: '/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-T6MEnL']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8cd85/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_8cd85.dir/build.make CMakeFiles/cmTC_8cd85.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-CZfS9f']
-        ignore line: [Building CXX object CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_87c94/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_87c94.dir/build.make CMakeFiles/cmTC_87c94.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/CMakeScratch/TryCompile-T6MEnL']
+        ignore line: [Building CXX object CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -1501,8 +2428,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8cd85.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_8cd85.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccg0SmeJ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_87c94.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.2/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_87c94.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -fzero-init-padding-bits=all -Wbidi-chars=any -o /tmp/ccGHkpUC.s]
         ignore line: [GNU C++17 (Ubuntu 15.2.0-16ubuntu1) version 15.2.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 15.2.0  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version isl-0.27-GMP]
         ignore line: []
@@ -1523,14 +2450,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: b661a74662ad7cf413c4193391ab5290]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8cd85.dir/']
-        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccg0SmeJ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_87c94.dir/']
+        ignore line: [ /usr/bin/x86_64-linux-gnu-as -v --64 -o CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccGHkpUC.s]
         ignore line: [GNU assembler version 2.46 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.46]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_8cd85]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8cd85.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_87c94]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_87c94.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper]
@@ -1543,13 +2470,13 @@ events:
         ignore line: [gcc version 15.2.0 (Ubuntu 15.2.0-16ubuntu1) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/15/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/15/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/15/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_8cd85' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_8cd85.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUTBWxX.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_8cd85 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_87c94' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_87c94.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/15/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0rqOzz.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_87c94 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/15/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccUTBWxX.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc0rqOzz.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1567,7 +2494,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_8cd85] ==> ignore
+          arg [cmTC_87c94] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o]
@@ -1582,7 +2509,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1593,7 +2520,7 @@ events:
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 15.2.0]
-        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUTBWxX.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_8cd85 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_8cd85.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/15/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/15/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0rqOzz.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_87c94 /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/15 -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/15/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/15/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_87c94.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/15/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
@@ -1624,4 +2551,134 @@ events:
     message: |
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Ubuntu) 2.46
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:7 (find_package)"
+    name: "SFML"
+    components:
+      -
+        name: "Graphics"
+        required: true
+        found: false
+      -
+        name: "Window"
+        required: true
+        found: false
+      -
+        name: "system"
+        required: true
+        found: false
+    configs:
+      -
+        filename: "SFMLConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "sfml-config.cmake"
+        kind: "cmake"
+    version_request:
+      version: "3.0"
+      version_complete: "3.0"
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "SFML"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/pkgRedirects/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/pkgRedirects/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/SFMLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/sfml-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake"
+      mode: "config"
+      version: "3.0.2"
+    search_context:
+      ENV{PATH}:
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/remote-cli"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/sbin"
+        - "/usr/bin"
+        - "/sbin"
+        - "/bin"
+        - "/usr/games"
+        - "/usr/local/games"
+        - "/usr/lib/wsl/lib"
+        - "/usr/lib/linux-tools/6.18.54.1-microsoft-standard-WSL2/bin"
+        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
+        - "/mnt/c/WINDOWS/system32"
+        - "/mnt/c/WINDOWS"
+        - "/mnt/c/WINDOWS/System32/Wbem"
+        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
+        - "/mnt/c/WINDOWS/System32/OpenSSH/"
+        - "/mnt/c/Program Files/Git/cmd"
+        - "/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+        - "/mnt/c/Program Files/CMake/bin"
+        - "/mnt/c/Program Files/nodejs/"
+        - "/mnt/c/Program Files/WSL/"
+        - "/mnt/c/Users/antma/.local/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Microsoft/WindowsApps"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin"
+        - "/mnt/c/Users/antma/.bun/bin"
+        - "/mnt/c/Users/antma/AppData/Roaming/npm"
+        - "/mnt/c/Users/antma/AppData/Local/Python/bin"
+        - "/mnt/c/Users/antma/AppData/Local/Programs/Microsoft VS Code/bin/copilot-shim"
+        - "/snap/bin"
+        - "/home/antmalecki/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/antmalecki/.vscode-server/bin/e646868227c3e3a9e3f24277c8c7220be42c0be7/bin/copilot-shim"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
 ...

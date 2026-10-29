@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/server/init_function.cpp" "CMakeFiles/server.dir/server/init_function.cpp.o" "gcc" "CMakeFiles/server.dir/server/init_function.cpp.o.d"
+  "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/init_function.cpp" "CMakeFiles/server.dir/server/init_function.cpp.o" "gcc" "CMakeFiles/server.dir/server/init_function.cpp.o.d"
   "" "server" "gcc" "CMakeFiles/server.dir/link.d"
   )
 

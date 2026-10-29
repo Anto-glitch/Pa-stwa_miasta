@@ -1,5 +1,5 @@
 CMakeFiles/client.dir/client/init_connection.cpp.o: \
- /home/antek/Documents/Antek/sieci2/projekt/Pa-stwa_miasta/client/init_connection.cpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/init_connection.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/15/cstdio \
  /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
