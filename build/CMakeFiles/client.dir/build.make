@@ -72,28 +72,60 @@ include CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/codegen:
 .PHONY : CMakeFiles/client.dir/codegen
 
-CMakeFiles/client.dir/client/init_connection.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/client/init_connection.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/init_connection.cpp
-CMakeFiles/client.dir/client/init_connection.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/client/init_connection.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/client/init_connection.cpp.o -MF CMakeFiles/client.dir/client/init_connection.cpp.o.d -o CMakeFiles/client.dir/client/init_connection.cpp.o -c /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/init_connection.cpp
+CMakeFiles/client.dir/client/client.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client/client.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp
+CMakeFiles/client.dir/client/client.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/client/client.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/client/client.cpp.o -MF CMakeFiles/client.dir/client/client.cpp.o.d -o CMakeFiles/client.dir/client/client.cpp.o -c /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp
 
-CMakeFiles/client.dir/client/init_connection.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/client/init_connection.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/init_connection.cpp > CMakeFiles/client.dir/client/init_connection.cpp.i
+CMakeFiles/client.dir/client/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/client/client.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp > CMakeFiles/client.dir/client/client.cpp.i
 
-CMakeFiles/client.dir/client/init_connection.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/client/init_connection.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/init_connection.cpp -o CMakeFiles/client.dir/client/init_connection.cpp.s
+CMakeFiles/client.dir/client/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/client/client.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp -o CMakeFiles/client.dir/client/client.cpp.s
+
+CMakeFiles/client.dir/client/socket_connection.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client/socket_connection.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_connection.cpp
+CMakeFiles/client.dir/client/socket_connection.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/client.dir/client/socket_connection.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/client/socket_connection.cpp.o -MF CMakeFiles/client.dir/client/socket_connection.cpp.o.d -o CMakeFiles/client.dir/client/socket_connection.cpp.o -c /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_connection.cpp
+
+CMakeFiles/client.dir/client/socket_connection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/client/socket_connection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_connection.cpp > CMakeFiles/client.dir/client/socket_connection.cpp.i
+
+CMakeFiles/client.dir/client/socket_connection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/client/socket_connection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_connection.cpp -o CMakeFiles/client.dir/client/socket_connection.cpp.s
+
+CMakeFiles/client.dir/client/socket_write.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client/socket_write.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_write.cpp
+CMakeFiles/client.dir/client/socket_write.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client.dir/client/socket_write.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/client/socket_write.cpp.o -MF CMakeFiles/client.dir/client/socket_write.cpp.o.d -o CMakeFiles/client.dir/client/socket_write.cpp.o -c /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_write.cpp
+
+CMakeFiles/client.dir/client/socket_write.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/client/socket_write.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_write.cpp > CMakeFiles/client.dir/client/socket_write.cpp.i
+
+CMakeFiles/client.dir/client/socket_write.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/client/socket_write.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_write.cpp -o CMakeFiles/client.dir/client/socket_write.cpp.s
 
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/client/init_connection.cpp.o"
+"CMakeFiles/client.dir/client/client.cpp.o" \
+"CMakeFiles/client.dir/client/socket_connection.cpp.o" \
+"CMakeFiles/client.dir/client/socket_write.cpp.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
-client: CMakeFiles/client.dir/client/init_connection.cpp.o
+client: CMakeFiles/client.dir/client/client.cpp.o
+client: CMakeFiles/client.dir/client/socket_connection.cpp.o
+client: CMakeFiles/client.dir/client/socket_write.cpp.o
 client: CMakeFiles/client.dir/build.make
 client: CMakeFiles/client.dir/compiler_depend.ts
 client: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.3.0.2
@@ -101,7 +133,7 @@ client: /usr/lib/x86_64-linux-gnu/libsfml-window.so.3.0.2
 client: /usr/lib/x86_64-linux-gnu/libsfml-network.so.3.0.2
 client: /usr/lib/x86_64-linux-gnu/libsfml-system.so.3.0.2
 client: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -149,53 +149,149 @@ server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
 .PHONY : server/fast
 
-client/init_connection.o: client/init_connection.cpp.o
-.PHONY : client/init_connection.o
+client/client.o: client/client.cpp.o
+.PHONY : client/client.o
 
 # target to build an object file
-client/init_connection.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/init_connection.cpp.o
-.PHONY : client/init_connection.cpp.o
+client/client.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/client.cpp.o
+.PHONY : client/client.cpp.o
 
-client/init_connection.i: client/init_connection.cpp.i
-.PHONY : client/init_connection.i
+client/client.i: client/client.cpp.i
+.PHONY : client/client.i
 
 # target to preprocess a source file
-client/init_connection.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/init_connection.cpp.i
-.PHONY : client/init_connection.cpp.i
+client/client.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/client.cpp.i
+.PHONY : client/client.cpp.i
 
-client/init_connection.s: client/init_connection.cpp.s
-.PHONY : client/init_connection.s
+client/client.s: client/client.cpp.s
+.PHONY : client/client.s
 
 # target to generate assembly for a file
-client/init_connection.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/init_connection.cpp.s
-.PHONY : client/init_connection.cpp.s
+client/client.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/client.cpp.s
+.PHONY : client/client.cpp.s
 
-server/init_function.o: server/init_function.cpp.o
-.PHONY : server/init_function.o
+client/socket_connection.o: client/socket_connection.cpp.o
+.PHONY : client/socket_connection.o
 
 # target to build an object file
-server/init_function.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/init_function.cpp.o
-.PHONY : server/init_function.cpp.o
+client/socket_connection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_connection.cpp.o
+.PHONY : client/socket_connection.cpp.o
 
-server/init_function.i: server/init_function.cpp.i
-.PHONY : server/init_function.i
+client/socket_connection.i: client/socket_connection.cpp.i
+.PHONY : client/socket_connection.i
 
 # target to preprocess a source file
-server/init_function.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/init_function.cpp.i
-.PHONY : server/init_function.cpp.i
+client/socket_connection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_connection.cpp.i
+.PHONY : client/socket_connection.cpp.i
 
-server/init_function.s: server/init_function.cpp.s
-.PHONY : server/init_function.s
+client/socket_connection.s: client/socket_connection.cpp.s
+.PHONY : client/socket_connection.s
 
 # target to generate assembly for a file
-server/init_function.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/init_function.cpp.s
-.PHONY : server/init_function.cpp.s
+client/socket_connection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_connection.cpp.s
+.PHONY : client/socket_connection.cpp.s
+
+client/socket_write.o: client/socket_write.cpp.o
+.PHONY : client/socket_write.o
+
+# target to build an object file
+client/socket_write.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_write.cpp.o
+.PHONY : client/socket_write.cpp.o
+
+client/socket_write.i: client/socket_write.cpp.i
+.PHONY : client/socket_write.i
+
+# target to preprocess a source file
+client/socket_write.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_write.cpp.i
+.PHONY : client/socket_write.cpp.i
+
+client/socket_write.s: client/socket_write.cpp.s
+.PHONY : client/socket_write.s
+
+# target to generate assembly for a file
+client/socket_write.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_write.cpp.s
+.PHONY : client/socket_write.cpp.s
+
+server/server.o: server/server.cpp.o
+.PHONY : server/server.o
+
+# target to build an object file
+server/server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/server.cpp.o
+.PHONY : server/server.cpp.o
+
+server/server.i: server/server.cpp.i
+.PHONY : server/server.i
+
+# target to preprocess a source file
+server/server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/server.cpp.i
+.PHONY : server/server.cpp.i
+
+server/server.s: server/server.cpp.s
+.PHONY : server/server.s
+
+# target to generate assembly for a file
+server/server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/server.cpp.s
+.PHONY : server/server.cpp.s
+
+server/server_connection.o: server/server_connection.cpp.o
+.PHONY : server/server_connection.o
+
+# target to build an object file
+server/server_connection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/server_connection.cpp.o
+.PHONY : server/server_connection.cpp.o
+
+server/server_connection.i: server/server_connection.cpp.i
+.PHONY : server/server_connection.i
+
+# target to preprocess a source file
+server/server_connection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/server_connection.cpp.i
+.PHONY : server/server_connection.cpp.i
+
+server/server_connection.s: server/server_connection.cpp.s
+.PHONY : server/server_connection.s
+
+# target to generate assembly for a file
+server/server_connection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/server_connection.cpp.s
+.PHONY : server/server_connection.cpp.s
+
+server/socket_read.o: server/socket_read.cpp.o
+.PHONY : server/socket_read.o
+
+# target to build an object file
+server/socket_read.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/socket_read.cpp.o
+.PHONY : server/socket_read.cpp.o
+
+server/socket_read.i: server/socket_read.cpp.i
+.PHONY : server/socket_read.i
+
+# target to preprocess a source file
+server/socket_read.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/socket_read.cpp.i
+.PHONY : server/socket_read.cpp.i
+
+server/socket_read.s: server/socket_read.cpp.s
+.PHONY : server/socket_read.s
+
+# target to generate assembly for a file
+server/socket_read.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/socket_read.cpp.s
+.PHONY : server/socket_read.cpp.s
 
 # Help Target
 help:
@@ -208,12 +304,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... client"
 	@echo "... server"
-	@echo "... client/init_connection.o"
-	@echo "... client/init_connection.i"
-	@echo "... client/init_connection.s"
-	@echo "... server/init_function.o"
-	@echo "... server/init_function.i"
-	@echo "... server/init_function.s"
+	@echo "... client/client.o"
+	@echo "... client/client.i"
+	@echo "... client/client.s"
+	@echo "... client/socket_connection.o"
+	@echo "... client/socket_connection.i"
+	@echo "... client/socket_connection.s"
+	@echo "... client/socket_write.o"
+	@echo "... client/socket_write.i"
+	@echo "... client/socket_write.s"
+	@echo "... server/server.o"
+	@echo "... server/server.i"
+	@echo "... server/server.s"
+	@echo "... server/server_connection.o"
+	@echo "... server/server_connection.i"
+	@echo "... server/server_connection.s"
+	@echo "... server/socket_read.o"
+	@echo "... server/socket_read.i"
+	@echo "... server/socket_read.s"
 .PHONY : help
 
 

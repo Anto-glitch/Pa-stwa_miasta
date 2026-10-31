@@ -1,7 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/client.dir/link.d"
-  "CMakeFiles/client.dir/client/init_connection.cpp.o"
-  "CMakeFiles/client.dir/client/init_connection.cpp.o.d"
+  "CMakeFiles/client.dir/client/client.cpp.o"
+  "CMakeFiles/client.dir/client/client.cpp.o.d"
+  "CMakeFiles/client.dir/client/socket_connection.cpp.o"
+  "CMakeFiles/client.dir/client/socket_connection.cpp.o.d"
+  "CMakeFiles/client.dir/client/socket_write.cpp.o"
+  "CMakeFiles/client.dir/client/socket_write.cpp.o.d"
   "client"
   "client.pdb"
 )

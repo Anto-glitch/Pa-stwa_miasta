@@ -1,7 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/server.dir/link.d"
-  "CMakeFiles/server.dir/server/init_function.cpp.o"
-  "CMakeFiles/server.dir/server/init_function.cpp.o.d"
+  "CMakeFiles/server.dir/server/server.cpp.o"
+  "CMakeFiles/server.dir/server/server.cpp.o.d"
+  "CMakeFiles/server.dir/server/server_connection.cpp.o"
+  "CMakeFiles/server.dir/server/server_connection.cpp.o.d"
+  "CMakeFiles/server.dir/server/socket_read.cpp.o"
+  "CMakeFiles/server.dir/server/socket_read.cpp.o.d"
   "server"
   "server.pdb"
 )
