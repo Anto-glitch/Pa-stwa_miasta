@@ -13,58 +13,74 @@
 
 using namespace std;
 
-void handleClient(int clientId, vector<vector<string>> &messages, mutex &message_mutex) {
-                      
-     vector<string> answers;
-    string receive = "";
-    char buffer[1024];
-    int turns = 0;
+void display_answers(vector<vector<string>> &messages) {
+  for (size_t i = 0; i < messages.size(); i++) {
+    cout << "Gracz " << i + 1 << ": ";
+    for (size_t j = 0; j < messages[i].size(); j++) {
+      cout << "[" << messages[i][j] << "] ";
+    }
+    cout << endl;
+  }
+}
 
-    string prompt = "Podaj imie, nazwisko, miasto (kazde zatwierdz enterem):\n";
+void handleClient(int clientId, vector<vector<string>> &messages,
+                  mutex &message_mutex) {
+
+  vector<string> categories = {"IMIE", "NAZWISKO", "MIASTO"};
+
+  vector<string> answers;
+  string accumulated_text = "";
+  char buffer[1024];
+  int turns = 0;
+  bool client_closed = false;
+
+  while (turns < categories.size() && !client_closed) {
+
+    string prompt =
+        "Podaj " + categories[turns] + " (kazde zatwierdz enterem):\n";
     write(clientId, prompt.c_str(), prompt.length());
 
-  while (true) {
     ssize_t bytes_read = read(clientId, buffer, sizeof(buffer) - 1);
     if (bytes_read <= 0) {
       if (bytes_read == -1)
         perror("Read failed");
       break;
     }
-    
-    receive.assign(buffer, bytes_read);
-    
-    while (!receive.empty() &&
-    (receive.back() == '\n' || receive.back() == '\r'))
-    receive.pop_back();
-    
-    if (receive == "close") {
+
+    accumulated_text.append(buffer, bytes_read);
+
+    size_t pos;
+    while ((pos = accumulated_text.find('\n')) != string::npos) {
+      string line = accumulated_text.substr(0, pos);
+
+      if (!line.empty() && line.back() == '\r') {
+        line.pop_back();
+      }
+
+      if (line == "close") {
+        client_closed = true;
+        break;
+      }
+
+      accumulated_text.erase(0, pos + 1);
+      answers.push_back(line);
+      turns++;
+
+      if (turns >= categories.size())
         break;
     }
-    
-    if(turns >= 3) break;
-    
-    answers.push_back(receive);
-    
-    turns++;
-    
   }
 
   if (!answers.empty()) {
-        lock_guard<mutex> lock(message_mutex);
-        messages.push_back(answers);
-        
-        cout << "Ilosc zatwierdzonych pakietow odpowiedzi: " << messages.size() << endl;
-        cout << "Zestawienie odpowiedzi wszystkich graczy: " << endl;
-        
-        
-        for(size_t i = 0; i < messages.size(); i++) {
-            cout << "Gracz " << i + 1 << ": ";
-            for(size_t j = 0; j < messages[i].size(); j++) {
-                cout << "[" << messages[i][j] << "] ";
-            }
-            cout << endl;
-        }
-    }
+    lock_guard<mutex> lock(message_mutex);
+    messages.push_back(answers);
+
+    cout << "Ilosc zatwierdzonych pakietow odpowiedzi: " << messages.size()
+         << endl;
+    cout << "Zestawienie odpowiedzi wszystkich graczy: " << endl;
+
+    display_answers(messages);
+  }
 
   close(clientId);
 }
