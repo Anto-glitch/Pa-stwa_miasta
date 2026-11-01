@@ -1,9 +1,12 @@
 CMakeFiles/client.dir/client/client.cpp.o: \
  /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp \
  /usr/include/stdc-predef.h \
- /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_connection.hpp \
- /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_write.hpp \
- /usr/include/c++/15/cstddef \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/image_sprite.hpp \
+ /usr/include/SFML/Graphics.hpp /usr/include/SFML/Graphics/BlendMode.hpp \
+ /usr/include/SFML/Graphics/Export.hpp /usr/include/SFML/Config.hpp \
+ /usr/include/SFML/Graphics/CircleShape.hpp \
+ /usr/include/SFML/Graphics/Shape.hpp \
+ /usr/include/SFML/Graphics/Color.hpp /usr/include/c++/15/cstdint \
  /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -15,13 +18,6 @@ CMakeFiles/client.dir/client/client.cpp.o: \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/cpu_defines.h \
  /usr/include/c++/15/pstl/pstl_config.h \
- /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h \
- /usr/include/c++/15/bits/version.h /usr/include/SFML/Graphics.hpp \
- /usr/include/SFML/Graphics/BlendMode.hpp \
- /usr/include/SFML/Graphics/Export.hpp /usr/include/SFML/Config.hpp \
- /usr/include/SFML/Graphics/CircleShape.hpp \
- /usr/include/SFML/Graphics/Shape.hpp \
- /usr/include/SFML/Graphics/Color.hpp /usr/include/c++/15/cstdint \
  /usr/lib/gcc/x86_64-linux-gnu/15/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
@@ -38,11 +34,13 @@ CMakeFiles/client.dir/client/client.cpp.o: \
  /usr/include/SFML/System/Export.hpp /usr/include/SFML/System/Angle.hpp \
  /usr/include/SFML/System/Angle.inl /usr/include/c++/15/cassert \
  /usr/include/assert.h /usr/include/SFML/System/Vector2.inl \
- /usr/include/c++/15/optional /usr/include/c++/15/type_traits \
- /usr/include/c++/15/exception /usr/include/c++/15/bits/exception.h \
+ /usr/include/c++/15/optional /usr/include/c++/15/bits/version.h \
+ /usr/include/c++/15/type_traits /usr/include/c++/15/exception \
+ /usr/include/c++/15/bits/exception.h \
  /usr/include/c++/15/bits/exception_ptr.h \
  /usr/include/c++/15/bits/exception_defines.h \
  /usr/include/c++/15/bits/cxxabi_init_exception.h \
+ /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h \
  /usr/include/c++/15/typeinfo /usr/include/c++/15/bits/hash_bytes.h \
  /usr/include/c++/15/new /usr/include/c++/15/bits/move.h \
  /usr/include/c++/15/bits/nested_exception.h \
@@ -69,7 +67,7 @@ CMakeFiles/client.dir/client/client.cpp.o: \
  /usr/include/c++/15/bits/ptr_traits.h /usr/include/c++/15/debug/debug.h \
  /usr/include/c++/15/bits/predefined_ops.h /usr/include/c++/15/bit \
  /usr/include/c++/15/concepts /usr/include/c++/15/bits/range_access.h \
- /usr/include/SFML/Graphics/Transform.inl \
+ /usr/include/SFML/Graphics/Transform.inl /usr/include/c++/15/cstddef \
  /usr/include/SFML/Graphics/Transformable.hpp \
  /usr/include/SFML/Graphics/VertexArray.hpp \
  /usr/include/SFML/Graphics/Vertex.hpp /usr/include/c++/15/vector \
@@ -266,4 +264,7 @@ CMakeFiles/client.dir/client/client.cpp.o: \
  /usr/include/SFML/System/FileInputStream.hpp \
  /usr/include/SFML/System/InputStream.hpp \
  /usr/include/SFML/System/MemoryInputStream.hpp \
- /usr/include/SFML/System/Sleep.hpp /usr/include/c++/15/iostream
+ /usr/include/SFML/System/Sleep.hpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_connection.hpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_write.hpp \
+ /usr/include/c++/15/iostream

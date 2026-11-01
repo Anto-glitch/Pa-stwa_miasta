@@ -173,6 +173,30 @@ client/client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/client.cpp.s
 .PHONY : client/client.cpp.s
 
+client/image_sprite.o: client/image_sprite.cpp.o
+.PHONY : client/image_sprite.o
+
+# target to build an object file
+client/image_sprite.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/image_sprite.cpp.o
+.PHONY : client/image_sprite.cpp.o
+
+client/image_sprite.i: client/image_sprite.cpp.i
+.PHONY : client/image_sprite.i
+
+# target to preprocess a source file
+client/image_sprite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/image_sprite.cpp.i
+.PHONY : client/image_sprite.cpp.i
+
+client/image_sprite.s: client/image_sprite.cpp.s
+.PHONY : client/image_sprite.s
+
+# target to generate assembly for a file
+client/image_sprite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/image_sprite.cpp.s
+.PHONY : client/image_sprite.cpp.s
+
 client/socket_connection.o: client/socket_connection.cpp.o
 .PHONY : client/socket_connection.o
 
@@ -307,6 +331,9 @@ help:
 	@echo "... client/client.o"
 	@echo "... client/client.i"
 	@echo "... client/client.s"
+	@echo "... client/image_sprite.o"
+	@echo "... client/image_sprite.i"
+	@echo "... client/image_sprite.s"
 	@echo "... client/socket_connection.o"
 	@echo "... client/socket_connection.i"
 	@echo "... client/socket_connection.s"
