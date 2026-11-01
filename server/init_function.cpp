@@ -24,9 +24,8 @@ void display_answers(vector<vector<string>> &messages) {
 }
 
 void handleClient(int clientId, vector<vector<string>> &messages,
-                  mutex &message_mutex) {
-
-  vector<string> categories = {"IMIE", "NAZWISKO", "MIASTO"};
+                  mutex &message_mutex, char random_letter,
+                  vector<string> categories) {
 
   vector<string> answers;
   string accumulated_text = "";
@@ -61,8 +60,13 @@ void handleClient(int clientId, vector<vector<string>> &messages,
         client_closed = true;
         break;
       }
-
+      
       accumulated_text.erase(0, pos + 1);
+
+      if (!line.empty() && line[0] != random_letter) {
+        break;
+      }
+
       answers.push_back(line);
       turns++;
 
@@ -86,6 +90,10 @@ void handleClient(int clientId, vector<vector<string>> &messages,
 }
 
 int main(void) {
+
+  char random_letter = 'k';
+  vector<string> categories = {"IMIE", "NAZWISKO", "MIASTO", "ROSLINA"};
+
   int serverId = socket(PF_INET, SOCK_STREAM, 0);
   if (serverId == -1) {
     perror("Socket creation failed");
@@ -120,7 +128,8 @@ int main(void) {
       continue;
     }
 
-    thread t1(handleClient, clientId, ref(messages), ref(message_mutex));
+    thread t1(handleClient, clientId, ref(messages), ref(message_mutex),
+              random_letter, ref(categories));
     t1.detach();
   }
   close(serverId);
