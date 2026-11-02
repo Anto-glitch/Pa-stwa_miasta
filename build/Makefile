@@ -173,77 +173,77 @@ client/client.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/client.cpp.s
 .PHONY : client/client.cpp.s
 
-client/image_sprite.o: client/image_sprite.cpp.o
-.PHONY : client/image_sprite.o
+client/screens/image_sprite.o: client/screens/image_sprite.cpp.o
+.PHONY : client/screens/image_sprite.o
 
 # target to build an object file
-client/image_sprite.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/image_sprite.cpp.o
-.PHONY : client/image_sprite.cpp.o
+client/screens/image_sprite.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/screens/image_sprite.cpp.o
+.PHONY : client/screens/image_sprite.cpp.o
 
-client/image_sprite.i: client/image_sprite.cpp.i
-.PHONY : client/image_sprite.i
+client/screens/image_sprite.i: client/screens/image_sprite.cpp.i
+.PHONY : client/screens/image_sprite.i
 
 # target to preprocess a source file
-client/image_sprite.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/image_sprite.cpp.i
-.PHONY : client/image_sprite.cpp.i
+client/screens/image_sprite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/screens/image_sprite.cpp.i
+.PHONY : client/screens/image_sprite.cpp.i
 
-client/image_sprite.s: client/image_sprite.cpp.s
-.PHONY : client/image_sprite.s
+client/screens/image_sprite.s: client/screens/image_sprite.cpp.s
+.PHONY : client/screens/image_sprite.s
 
 # target to generate assembly for a file
-client/image_sprite.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/image_sprite.cpp.s
-.PHONY : client/image_sprite.cpp.s
+client/screens/image_sprite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/screens/image_sprite.cpp.s
+.PHONY : client/screens/image_sprite.cpp.s
 
-client/socket_connection.o: client/socket_connection.cpp.o
-.PHONY : client/socket_connection.o
+client/systems/socket_connection.o: client/systems/socket_connection.cpp.o
+.PHONY : client/systems/socket_connection.o
 
 # target to build an object file
-client/socket_connection.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_connection.cpp.o
-.PHONY : client/socket_connection.cpp.o
+client/systems/socket_connection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_connection.cpp.o
+.PHONY : client/systems/socket_connection.cpp.o
 
-client/socket_connection.i: client/socket_connection.cpp.i
-.PHONY : client/socket_connection.i
+client/systems/socket_connection.i: client/systems/socket_connection.cpp.i
+.PHONY : client/systems/socket_connection.i
 
 # target to preprocess a source file
-client/socket_connection.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_connection.cpp.i
-.PHONY : client/socket_connection.cpp.i
+client/systems/socket_connection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_connection.cpp.i
+.PHONY : client/systems/socket_connection.cpp.i
 
-client/socket_connection.s: client/socket_connection.cpp.s
-.PHONY : client/socket_connection.s
+client/systems/socket_connection.s: client/systems/socket_connection.cpp.s
+.PHONY : client/systems/socket_connection.s
 
 # target to generate assembly for a file
-client/socket_connection.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_connection.cpp.s
-.PHONY : client/socket_connection.cpp.s
+client/systems/socket_connection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_connection.cpp.s
+.PHONY : client/systems/socket_connection.cpp.s
 
-client/socket_write.o: client/socket_write.cpp.o
-.PHONY : client/socket_write.o
+client/systems/socket_write.o: client/systems/socket_write.cpp.o
+.PHONY : client/systems/socket_write.o
 
 # target to build an object file
-client/socket_write.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_write.cpp.o
-.PHONY : client/socket_write.cpp.o
+client/systems/socket_write.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_write.cpp.o
+.PHONY : client/systems/socket_write.cpp.o
 
-client/socket_write.i: client/socket_write.cpp.i
-.PHONY : client/socket_write.i
+client/systems/socket_write.i: client/systems/socket_write.cpp.i
+.PHONY : client/systems/socket_write.i
 
 # target to preprocess a source file
-client/socket_write.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_write.cpp.i
-.PHONY : client/socket_write.cpp.i
+client/systems/socket_write.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_write.cpp.i
+.PHONY : client/systems/socket_write.cpp.i
 
-client/socket_write.s: client/socket_write.cpp.s
-.PHONY : client/socket_write.s
+client/systems/socket_write.s: client/systems/socket_write.cpp.s
+.PHONY : client/systems/socket_write.s
 
 # target to generate assembly for a file
-client/socket_write.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/socket_write.cpp.s
-.PHONY : client/socket_write.cpp.s
+client/systems/socket_write.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_write.cpp.s
+.PHONY : client/systems/socket_write.cpp.s
 
 server/server.o: server/server.cpp.o
 .PHONY : server/server.o
@@ -331,15 +331,15 @@ help:
 	@echo "... client/client.o"
 	@echo "... client/client.i"
 	@echo "... client/client.s"
-	@echo "... client/image_sprite.o"
-	@echo "... client/image_sprite.i"
-	@echo "... client/image_sprite.s"
-	@echo "... client/socket_connection.o"
-	@echo "... client/socket_connection.i"
-	@echo "... client/socket_connection.s"
-	@echo "... client/socket_write.o"
-	@echo "... client/socket_write.i"
-	@echo "... client/socket_write.s"
+	@echo "... client/screens/image_sprite.o"
+	@echo "... client/screens/image_sprite.i"
+	@echo "... client/screens/image_sprite.s"
+	@echo "... client/systems/socket_connection.o"
+	@echo "... client/systems/socket_connection.i"
+	@echo "... client/systems/socket_connection.s"
+	@echo "... client/systems/socket_write.o"
+	@echo "... client/systems/socket_write.i"
+	@echo "... client/systems/socket_write.s"
 	@echo "... server/server.o"
 	@echo "... server/server.i"
 	@echo "... server/server.s"

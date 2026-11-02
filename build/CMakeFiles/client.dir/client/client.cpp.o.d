@@ -1,7 +1,7 @@
 CMakeFiles/client.dir/client/client.cpp.o: \
  /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp \
  /usr/include/stdc-predef.h \
- /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/image_sprite.hpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/screens/image_sprite.hpp \
  /usr/include/SFML/Graphics.hpp /usr/include/SFML/Graphics/BlendMode.hpp \
  /usr/include/SFML/Graphics/Export.hpp /usr/include/SFML/Config.hpp \
  /usr/include/SFML/Graphics/CircleShape.hpp \
@@ -265,6 +265,6 @@ CMakeFiles/client.dir/client/client.cpp.o: \
  /usr/include/SFML/System/InputStream.hpp \
  /usr/include/SFML/System/MemoryInputStream.hpp \
  /usr/include/SFML/System/Sleep.hpp \
- /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_connection.hpp \
- /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_write.hpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_connection.hpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.hpp \
  /usr/include/c++/15/iostream

@@ -1,10 +1,11 @@
-#include "image_sprite.hpp"
-#include "socket_connection.hpp"
-#include "socket_write.hpp"
+#include "screens/image_sprite.hpp"
+#include "systems/socket_connection.hpp"
+#include "systems/socket_write.hpp"
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <optional>
+#include <vector>
 
 using namespace std;
 

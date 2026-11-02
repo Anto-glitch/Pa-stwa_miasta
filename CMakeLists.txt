@@ -3,9 +3,9 @@ project(Panstwa_Miasta)
 
 add_executable(client
     client/client.cpp
-    client/image_sprite.cpp
-    client/socket_connection.cpp
-    client/socket_write.cpp
+    client/screens/image_sprite.cpp
+    client/systems/socket_connection.cpp
+    client/systems/socket_write.cpp
 )
 
 add_executable(server

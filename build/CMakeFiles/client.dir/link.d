@@ -3,9 +3,9 @@ client: \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o \
   CMakeFiles/client.dir/client/client.cpp.o \
-  CMakeFiles/client.dir/client/image_sprite.cpp.o \
-  CMakeFiles/client.dir/client/socket_connection.cpp.o \
-  CMakeFiles/client.dir/client/socket_write.cpp.o \
+  CMakeFiles/client.dir/client/screens/image_sprite.cpp.o \
+  CMakeFiles/client.dir/client/systems/socket_connection.cpp.o \
+  CMakeFiles/client.dir/client/systems/socket_write.cpp.o \
   /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.3.0.2 \
   /usr/lib/x86_64-linux-gnu/libsfml-window.so.3.0.2 \
   /usr/lib/x86_64-linux-gnu/libsfml-network.so.3.0.2 \
@@ -65,11 +65,11 @@ client: \
 
 CMakeFiles/client.dir/client/client.cpp.o:
 
-CMakeFiles/client.dir/client/image_sprite.cpp.o:
+CMakeFiles/client.dir/client/screens/image_sprite.cpp.o:
 
-CMakeFiles/client.dir/client/socket_connection.cpp.o:
+CMakeFiles/client.dir/client/systems/socket_connection.cpp.o:
 
-CMakeFiles/client.dir/client/socket_write.cpp.o:
+CMakeFiles/client.dir/client/systems/socket_write.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.3.0.2:
 
