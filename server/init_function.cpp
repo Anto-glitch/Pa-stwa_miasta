@@ -60,10 +60,10 @@ void handleClient(int clientId, vector<vector<string>> &messages,
         client_closed = true;
         break;
       }
-      
+
       accumulated_text.erase(0, pos + 1);
 
-      if (!line.empty() && line[0] != random_letter) {
+      if (line.empty() || line[0] != random_letter) {
         break;
       }
 
@@ -92,7 +92,7 @@ void handleClient(int clientId, vector<vector<string>> &messages,
 int main(void) {
 
   char random_letter = 'k';
-  //wpisz wszystkie kategorie
+  // wpisz wszystkie kategorie
   vector<string> categories = {"IMIE", "NAZWISKO", "MIASTO", "ROSLINA"};
 
   int serverId = socket(PF_INET, SOCK_STREAM, 0);
