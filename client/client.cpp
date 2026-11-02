@@ -6,20 +6,23 @@
 #include <iostream>
 #include <optional>
 
-enum GameState{
-    START_SCREEN,
-    WAITING_ROOM,
-    GAME,
-    ELECTION,
-    RESULTS,
-};
+using namespace std;
 
 
 
 int main()
 {
+    enum GameState{
+    START_SCREEN,
+    WAITING_ROOM,
+    GAME,
+    ELECTION,
+    RESULTS,
+    };
 
     sf::RenderWindow window(sf::VideoMode({800, 600}), "Client Window");
+
+    vector<sf::Texture> textures;
 
     sf::Texture startScreenTexture;
     const auto startScreen = generateImageSprite(
@@ -28,12 +31,14 @@ int main()
         {0.f, 0.f},
         {800.f, 600.f}
     );
+    
 
     if (!startScreen) {
         std::cerr << "Failed to load start screen image." << std::endl;
         return 1;
     }
-
+    //todo : add function to load and generate sprites for other screens (waiting room, game, election, results)
+    
     const int socket_id = create_socket();
     if (socket_id == -1)
         return 1;
@@ -42,50 +47,33 @@ int main()
         return 1;
     }
 
+    GameState currentState = GameState::START_SCREEN;
     while (window.isOpen()) {
+
         while (const std::optional event = window.pollEvent()) {
+
             if (event->is<sf::Event::Closed>()) {
                 window.close();
             }
             
-            else if (const auto* keyEvent =
-                         event->getIf<sf::Event::KeyReleased>()) {
-                if (keyEvent->code == sf::Keyboard::Key::Enter) {
-                    // Obsługa klawisza Enter
+            else if (const auto* mouseEvent =
+                         event->getIf<sf::Event::MouseButtonPressed>()) {
+                if (mouseEvent->button == sf::Mouse::Button::Left) {
+                    // handle exit button or disconnect button click
                 }
             }
             
 
-             switch(GameState::START_SCREEN) {
-            case GameState::START_SCREEN:
-                // Obsługa ekranu startowego
-                break;
-            case GameState::WAITING_ROOM:
-                // Obsługa poczekalni
-                break;
-            case GameState::GAME:
-                // Obsługa gry
-                break;
-            case GameState::ELECTION:
-                // Obsługa wyborów
-                break;
-            case GameState::RESULTS:
-                // Obsługa wyników
-                break;
-        }
-
-
-
-        }
-
-        switch(GameState::START_SCREEN) {
+            switch(currentState) {
             case GameState::START_SCREEN:
                 //start screen
+                //set only events crucial for each state, to avoid unnecessary event handling
                 if (const auto* mouseEvent =
                          event->getIf<sf::Event::MouseButtonPressed>()) {
-                if (mouseEvent->button == sf::Mouse::Button::Left) {
-                    // Obsługa lewego przycisku myszy
-                }
+                    if (mouseEvent->button == sf::Mouse::Button::Left) 
+                    {
+                    // add code to handle connect button click)
+                    }
                 }
                 break;
             case GameState::WAITING_ROOM:
@@ -124,7 +112,9 @@ int main()
             case GameState::RESULTS:
                 // Obsługa wyników
                 break;
+            }
         }
+
 
         window.clear(sf::Color::Black);
         window.draw(*startScreen);
