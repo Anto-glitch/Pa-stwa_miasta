@@ -92,6 +92,7 @@ void handleClient(int clientId, vector<vector<string>> &messages,
 int main(void) {
 
   char random_letter = 'k';
+  //wpisz wszystkie kategorie
   vector<string> categories = {"IMIE", "NAZWISKO", "MIASTO", "ROSLINA"};
 
   int serverId = socket(PF_INET, SOCK_STREAM, 0);
