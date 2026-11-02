@@ -1,8 +1,18 @@
 cmake_minimum_required(VERSION 4.0)
 project(Panstwa_Miasta)
 
-add_executable(client client/init_connection.cpp)
-add_executable(server server/init_function.cpp)
+add_executable(client
+    client/client.cpp
+    client/screens/image_sprite.cpp
+    client/systems/socket_connection.cpp
+    client/systems/socket_write.cpp
+)
+
+add_executable(server
+    server/server.cpp
+    server/server_connection.cpp
+    server/socket_read.cpp
+)
 
 find_package(SFML 3.0 COMPONENTS Graphics Window System Network REQUIRED)
 

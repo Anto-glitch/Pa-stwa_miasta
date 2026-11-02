@@ -9,8 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp" "CMakeFiles/client.dir/client/client.cpp.o" "gcc" "CMakeFiles/client.dir/client/client.cpp.o.d"
-  "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_connection.cpp" "CMakeFiles/client.dir/client/socket_connection.cpp.o" "gcc" "CMakeFiles/client.dir/client/socket_connection.cpp.o.d"
-  "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/socket_write.cpp" "CMakeFiles/client.dir/client/socket_write.cpp.o" "gcc" "CMakeFiles/client.dir/client/socket_write.cpp.o.d"
+  "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/screens/image_sprite.cpp" "CMakeFiles/client.dir/client/screens/image_sprite.cpp.o" "gcc" "CMakeFiles/client.dir/client/screens/image_sprite.cpp.o.d"
+  "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_connection.cpp" "CMakeFiles/client.dir/client/systems/socket_connection.cpp.o" "gcc" "CMakeFiles/client.dir/client/systems/socket_connection.cpp.o.d"
+  "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.cpp" "CMakeFiles/client.dir/client/systems/socket_write.cpp.o" "gcc" "CMakeFiles/client.dir/client/systems/socket_write.cpp.o.d"
   "" "client" "gcc" "CMakeFiles/client.dir/link.d"
   )
 
