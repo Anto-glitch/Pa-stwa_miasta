@@ -4,7 +4,9 @@
 #include <errno.h>
 #include <iostream>
 #include <mutex>
+#include <netinet/in.h>
 #include <string>
+#include <sys/socket.h>
 #include <thread>
 #include <unistd.h>
 #include <vector>
