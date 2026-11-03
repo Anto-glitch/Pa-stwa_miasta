@@ -6,7 +6,7 @@
 #include <vector>
 
 ssize_t read_from_socket(int socket, char* message, std::size_t message_size) {
-    const ssize_t bytes_read = recv(socket, message, message_size);
+    const ssize_t bytes_read = recv(socket, message, message_size, 0);
     if (bytes_read == -1) {
         perror("Read failed");
         return false;

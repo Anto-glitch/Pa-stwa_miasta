@@ -70,5 +70,5 @@ void handleClient(int clientId, vector<vector<string>> &messages,
     display_answers(messages);
   }
 
-  close(clientId);
+  close_socket(clientId);
 }

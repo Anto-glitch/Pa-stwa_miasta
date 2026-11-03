@@ -5,9 +5,8 @@
 #include <unistd.h>
 #include <vector>
 
-ssize_t read_from_socket(int socket, std::string& message, std::size_t message_size) {
-    std::vector<char> buffer(message_size);
-    const ssize_t bytes_read = recv(socket, buffer.data(), message_size);
+ssize_t read_from_socket(int socket, char* message, std::size_t message_max_size) {
+    const ssize_t bytes_read = recv(socket, message, message_max_size,0);
     if (bytes_read == -1) {
         perror("Read failed");
         return false;
@@ -15,7 +14,6 @@ ssize_t read_from_socket(int socket, std::string& message, std::size_t message_s
     if (bytes_read == 0) {
         return false;
     }
-    message.assign(buffer.data(), static_cast<std::size_t>(bytes_read));
     return bytes_read;
 }
 
