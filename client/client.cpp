@@ -1,6 +1,6 @@
 #include "screens/image_sprite.hpp"
 #include "systems/socket_connection.hpp"
-#include "systems/socket_write.hpp"
+#include "systems/socket_message.hpp"
 
 #include <SFML/Graphics.hpp>
 #include <iostream>

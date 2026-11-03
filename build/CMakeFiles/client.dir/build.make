@@ -114,26 +114,26 @@ CMakeFiles/client.dir/client/systems/socket_connection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/client/systems/socket_connection.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_connection.cpp -o CMakeFiles/client.dir/client/systems/socket_connection.cpp.s
 
-CMakeFiles/client.dir/client/systems/socket_write.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/client/systems/socket_write.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.cpp
-CMakeFiles/client.dir/client/systems/socket_write.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/client/systems/socket_write.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/client/systems/socket_write.cpp.o -MF CMakeFiles/client.dir/client/systems/socket_write.cpp.o.d -o CMakeFiles/client.dir/client/systems/socket_write.cpp.o -c /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.cpp
+CMakeFiles/client.dir/client/systems/socket_message.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client/systems/socket_message.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_message.cpp
+CMakeFiles/client.dir/client/systems/socket_message.cpp.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client.dir/client/systems/socket_message.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/client.dir/client/systems/socket_message.cpp.o -MF CMakeFiles/client.dir/client/systems/socket_message.cpp.o.d -o CMakeFiles/client.dir/client/systems/socket_message.cpp.o -c /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_message.cpp
 
-CMakeFiles/client.dir/client/systems/socket_write.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/client/systems/socket_write.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.cpp > CMakeFiles/client.dir/client/systems/socket_write.cpp.i
+CMakeFiles/client.dir/client/systems/socket_message.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/client.dir/client/systems/socket_message.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_message.cpp > CMakeFiles/client.dir/client/systems/socket_message.cpp.i
 
-CMakeFiles/client.dir/client/systems/socket_write.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/client/systems/socket_write.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.cpp -o CMakeFiles/client.dir/client/systems/socket_write.cpp.s
+CMakeFiles/client.dir/client/systems/socket_message.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/client.dir/client/systems/socket_message.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_message.cpp -o CMakeFiles/client.dir/client/systems/socket_message.cpp.s
 
 # Object files for target client
 client_OBJECTS = \
 "CMakeFiles/client.dir/client/client.cpp.o" \
 "CMakeFiles/client.dir/client/screens/image_sprite.cpp.o" \
 "CMakeFiles/client.dir/client/systems/socket_connection.cpp.o" \
-"CMakeFiles/client.dir/client/systems/socket_write.cpp.o"
+"CMakeFiles/client.dir/client/systems/socket_message.cpp.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
@@ -141,7 +141,7 @@ client_EXTERNAL_OBJECTS =
 client: CMakeFiles/client.dir/client/client.cpp.o
 client: CMakeFiles/client.dir/client/screens/image_sprite.cpp.o
 client: CMakeFiles/client.dir/client/systems/socket_connection.cpp.o
-client: CMakeFiles/client.dir/client/systems/socket_write.cpp.o
+client: CMakeFiles/client.dir/client/systems/socket_message.cpp.o
 client: CMakeFiles/client.dir/build.make
 client: CMakeFiles/client.dir/compiler_depend.ts
 client: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.3.0.2

@@ -221,29 +221,29 @@ client/systems/socket_connection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_connection.cpp.s
 .PHONY : client/systems/socket_connection.cpp.s
 
-client/systems/socket_write.o: client/systems/socket_write.cpp.o
-.PHONY : client/systems/socket_write.o
+client/systems/socket_message.o: client/systems/socket_message.cpp.o
+.PHONY : client/systems/socket_message.o
 
 # target to build an object file
-client/systems/socket_write.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_write.cpp.o
-.PHONY : client/systems/socket_write.cpp.o
+client/systems/socket_message.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_message.cpp.o
+.PHONY : client/systems/socket_message.cpp.o
 
-client/systems/socket_write.i: client/systems/socket_write.cpp.i
-.PHONY : client/systems/socket_write.i
+client/systems/socket_message.i: client/systems/socket_message.cpp.i
+.PHONY : client/systems/socket_message.i
 
 # target to preprocess a source file
-client/systems/socket_write.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_write.cpp.i
-.PHONY : client/systems/socket_write.cpp.i
+client/systems/socket_message.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_message.cpp.i
+.PHONY : client/systems/socket_message.cpp.i
 
-client/systems/socket_write.s: client/systems/socket_write.cpp.s
-.PHONY : client/systems/socket_write.s
+client/systems/socket_message.s: client/systems/socket_message.cpp.s
+.PHONY : client/systems/socket_message.s
 
 # target to generate assembly for a file
-client/systems/socket_write.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_write.cpp.s
-.PHONY : client/systems/socket_write.cpp.s
+client/systems/socket_message.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_message.cpp.s
+.PHONY : client/systems/socket_message.cpp.s
 
 server/handlers/client_handler.o: server/handlers/client_handler.cpp.o
 .PHONY : server/handlers/client_handler.o
@@ -385,9 +385,9 @@ help:
 	@echo "... client/systems/socket_connection.o"
 	@echo "... client/systems/socket_connection.i"
 	@echo "... client/systems/socket_connection.s"
-	@echo "... client/systems/socket_write.o"
-	@echo "... client/systems/socket_write.i"
-	@echo "... client/systems/socket_write.s"
+	@echo "... client/systems/socket_message.o"
+	@echo "... client/systems/socket_message.i"
+	@echo "... client/systems/socket_message.s"
 	@echo "... server/handlers/client_handler.o"
 	@echo "... server/handlers/client_handler.i"
 	@echo "... server/handlers/client_handler.s"

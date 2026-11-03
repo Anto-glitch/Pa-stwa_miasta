@@ -266,5 +266,5 @@ CMakeFiles/client.dir/client/client.cpp.o: \
  /usr/include/SFML/System/MemoryInputStream.hpp \
  /usr/include/SFML/System/Sleep.hpp \
  /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_connection.hpp \
- /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.hpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_message.hpp \
  /usr/include/c++/15/iostream

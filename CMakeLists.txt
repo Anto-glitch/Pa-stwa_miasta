@@ -5,7 +5,7 @@ add_executable(client
     client/client.cpp
     client/screens/image_sprite.cpp
     client/systems/socket_connection.cpp
-    client/systems/socket_write.cpp
+    client/systems/socket_message.cpp
 )
 
 add_executable(server

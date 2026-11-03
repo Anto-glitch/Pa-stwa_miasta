@@ -4,7 +4,7 @@
 CMakeFiles/client.dir/client/client.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp \
   /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/screens/image_sprite.hpp \
   /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_connection.hpp \
-  /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.hpp \
+  /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_message.hpp \
   /usr/include/SFML/Config.hpp \
   /usr/include/SFML/Graphics.hpp \
   /usr/include/SFML/Graphics/BlendMode.hpp \
@@ -787,19 +787,86 @@ CMakeFiles/client.dir/client/systems/socket_connection.cpp.o: /home/antmalecki/A
   /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/15/include/stddef.h
 
-CMakeFiles/client.dir/client/systems/socket_write.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.cpp \
-  /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.hpp \
+CMakeFiles/client.dir/client/systems/socket_message.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_message.cpp \
+  /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_message.hpp \
+  /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/asm-generic/posix_types.h \
   /usr/include/asm-generic/socket.h \
   /usr/include/asm-generic/sockios.h \
+  /usr/include/c++/15/backward/binders.h \
+  /usr/include/c++/15/bit \
+  /usr/include/c++/15/bits/alloc_traits.h \
+  /usr/include/c++/15/bits/allocator.h \
+  /usr/include/c++/15/bits/basic_string.h \
+  /usr/include/c++/15/bits/basic_string.tcc \
+  /usr/include/c++/15/bits/char_traits.h \
+  /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/concept_check.h \
+  /usr/include/c++/15/bits/cpp_type_traits.h \
+  /usr/include/c++/15/bits/cxxabi_forced.h \
+  /usr/include/c++/15/bits/exception.h \
+  /usr/include/c++/15/bits/exception_defines.h \
+  /usr/include/c++/15/bits/functexcept.h \
+  /usr/include/c++/15/bits/functional_hash.h \
+  /usr/include/c++/15/bits/hash_bytes.h \
+  /usr/include/c++/15/bits/invoke.h \
+  /usr/include/c++/15/bits/localefwd.h \
+  /usr/include/c++/15/bits/memory_resource.h \
+  /usr/include/c++/15/bits/memoryfwd.h \
+  /usr/include/c++/15/bits/move.h \
+  /usr/include/c++/15/bits/new_allocator.h \
+  /usr/include/c++/15/bits/ostream_insert.h \
+  /usr/include/c++/15/bits/postypes.h \
+  /usr/include/c++/15/bits/predefined_ops.h \
+  /usr/include/c++/15/bits/ptr_traits.h \
+  /usr/include/c++/15/bits/range_access.h \
+  /usr/include/c++/15/bits/refwrap.h \
+  /usr/include/c++/15/bits/requires_hosted.h \
+  /usr/include/c++/15/bits/std_abs.h \
+  /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
+  /usr/include/c++/15/bits/stl_construct.h \
+  /usr/include/c++/15/bits/stl_function.h \
+  /usr/include/c++/15/bits/stl_iterator.h \
+  /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/15/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
+  /usr/include/c++/15/bits/string_view.tcc \
+  /usr/include/c++/15/bits/stringfwd.h \
+  /usr/include/c++/15/bits/uses_allocator.h \
+  /usr/include/c++/15/bits/uses_allocator_args.h \
+  /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
   /usr/include/c++/15/bits/version.h \
+  /usr/include/c++/15/cctype \
   /usr/include/c++/15/cerrno \
+  /usr/include/c++/15/clocale \
+  /usr/include/c++/15/concepts \
   /usr/include/c++/15/cstddef \
   /usr/include/c++/15/cstdio \
+  /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/cwchar \
+  /usr/include/c++/15/debug/assertions.h \
+  /usr/include/c++/15/debug/debug.h \
+  /usr/include/c++/15/ext/alloc_traits.h \
+  /usr/include/c++/15/ext/numeric_traits.h \
+  /usr/include/c++/15/ext/string_conversions.h \
+  /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/initializer_list \
+  /usr/include/c++/15/iosfwd \
+  /usr/include/c++/15/new \
   /usr/include/c++/15/pstl/pstl_config.h \
+  /usr/include/c++/15/string \
+  /usr/include/c++/15/string_view \
+  /usr/include/c++/15/tuple \
+  /usr/include/c++/15/type_traits \
+  /usr/include/c++/15/vector \
+  /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
   /usr/include/features-time64.h \
@@ -808,9 +875,12 @@ CMakeFiles/client.dir/client/systems/socket_write.cpp.o: /home/antmalecki/Antek/
   /usr/include/linux/errno.h \
   /usr/include/linux/posix_types.h \
   /usr/include/linux/stddef.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdio.h \
+  /usr/include/stdlib.h \
   /usr/include/unistd.h \
+  /usr/include/wchar.h \
   /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
   /usr/include/x86_64-linux-gnu/asm/errno.h \
   /usr/include/x86_64-linux-gnu/asm/posix_types.h \
@@ -829,6 +899,7 @@ CMakeFiles/client.dir/client/systems/socket_write.cpp.o: /home/antmalecki/Antek/
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -839,6 +910,7 @@ CMakeFiles/client.dir/client/systems/socket_write.cpp.o: /home/antmalecki/Antek/
   /usr/include/x86_64-linux-gnu/bits/socket_type.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
@@ -849,12 +921,15 @@ CMakeFiles/client.dir/client/systems/socket_write.cpp.o: /home/antmalecki/Antek/
   /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
@@ -863,11 +938,17 @@ CMakeFiles/client.dir/client/systems/socket_write.cpp.o: /home/antmalecki/Antek/
   /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
   /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
+  /usr/include/x86_64-linux-gnu/c++/15/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
@@ -919,8 +1000,10 @@ client: /lib64/ld-linux-x86-64.so.2 \
   CMakeFiles/client.dir/client/client.cpp.o \
   CMakeFiles/client.dir/client/screens/image_sprite.cpp.o \
   CMakeFiles/client.dir/client/systems/socket_connection.cpp.o \
-  CMakeFiles/client.dir/client/systems/socket_write.cpp.o
+  CMakeFiles/client.dir/client/systems/socket_message.cpp.o
 
+
+CMakeFiles/client.dir/client/systems/socket_message.cpp.o:
 
 CMakeFiles/client.dir/client/systems/socket_connection.cpp.o:
 
@@ -986,8 +1069,6 @@ CMakeFiles/client.dir/client/client.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/in.h:
 
-/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.cpp:
-
 /usr/include/x86_64-linux-gnu/bits/getopt_core.h:
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
@@ -1009,8 +1090,6 @@ CMakeFiles/client.dir/client/client.cpp.o:
 /usr/lib/gcc/x86_64-linux-gnu/15/include/stdarg.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-CMakeFiles/client.dir/client/systems/socket_write.cpp.o:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
@@ -1384,15 +1463,7 @@ CMakeFiles/client.dir/client/systems/socket_write.cpp.o:
 
 /usr/include/SFML/Graphics/Rect.hpp:
 
-/usr/include/SFML/Graphics/Export.hpp:
-
-/usr/lib/x86_64-linux-gnu/libXau.so.6:
-
-/usr/include/SFML/Graphics/Sprite.hpp:
-
-/usr/include/locale.h:
-
-/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp:
+/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_message.hpp:
 
 /usr/include/c++/15/bits/fs_fwd.h:
 
@@ -1409,6 +1480,16 @@ CMakeFiles/client.dir/client/systems/socket_write.cpp.o:
 /usr/include/pthread.h:
 
 /usr/include/SFML/Graphics/ConvexShape.hpp:
+
+/usr/include/SFML/Graphics/Export.hpp:
+
+/usr/lib/x86_64-linux-gnu/libXau.so.6:
+
+/usr/include/SFML/Graphics/Sprite.hpp:
+
+/usr/include/locale.h:
+
+/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp:
 
 /usr/include/x86_64-linux-gnu/c++/15/bits/time_members.h:
 
@@ -1636,6 +1717,8 @@ CMakeFiles/client.dir/client/screens/image_sprite.cpp.o:
 
 /usr/include/c++/15/bits/stl_tempbuf.h:
 
+/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_message.cpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
 
 /usr/include/c++/15/bits/functexcept.h:
@@ -1731,8 +1814,6 @@ CMakeFiles/client.dir/client/screens/image_sprite.cpp.o:
 /usr/include/c++/15/pstl/execution_defs.h:
 
 /usr/include/c++/15/pstl/pstl_config.h:
-
-/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/systems/socket_write.hpp:
 
 /usr/include/c++/15/ratio:
 

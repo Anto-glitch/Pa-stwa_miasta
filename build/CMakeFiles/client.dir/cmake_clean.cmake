@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/client.dir/client/screens/image_sprite.cpp.o.d"
   "CMakeFiles/client.dir/client/systems/socket_connection.cpp.o"
   "CMakeFiles/client.dir/client/systems/socket_connection.cpp.o.d"
-  "CMakeFiles/client.dir/client/systems/socket_write.cpp.o"
-  "CMakeFiles/client.dir/client/systems/socket_write.cpp.o.d"
+  "CMakeFiles/client.dir/client/systems/socket_message.cpp.o"
+  "CMakeFiles/client.dir/client/systems/socket_message.cpp.o.d"
   "client"
   "client.pdb"
 )

@@ -5,7 +5,7 @@ client: \
   CMakeFiles/client.dir/client/client.cpp.o \
   CMakeFiles/client.dir/client/screens/image_sprite.cpp.o \
   CMakeFiles/client.dir/client/systems/socket_connection.cpp.o \
-  CMakeFiles/client.dir/client/systems/socket_write.cpp.o \
+  CMakeFiles/client.dir/client/systems/socket_message.cpp.o \
   /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.3.0.2 \
   /usr/lib/x86_64-linux-gnu/libsfml-window.so.3.0.2 \
   /usr/lib/x86_64-linux-gnu/libsfml-system.so.3.0.2 \
@@ -68,7 +68,7 @@ CMakeFiles/client.dir/client/screens/image_sprite.cpp.o:
 
 CMakeFiles/client.dir/client/systems/socket_connection.cpp.o:
 
-CMakeFiles/client.dir/client/systems/socket_write.cpp.o:
+CMakeFiles/client.dir/client/systems/socket_message.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.3.0.2:
 
