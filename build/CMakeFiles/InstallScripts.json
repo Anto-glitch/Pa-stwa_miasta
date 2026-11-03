@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/cmake_install.cmake"
+		"/mnt/d/Pa-stwa_miasta/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

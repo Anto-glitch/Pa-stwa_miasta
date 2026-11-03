@@ -1,40 +1,42 @@
 #include "server_connection.hpp"
 #include "socket_read.hpp"
 
+
+#include <cstddef>
+#include <cstdio>
+#include <cstdlib>
+#include <errno.h>
 #include <iostream>
+#include <mutex>
+#include <netinet/in.h>
 #include <string>
+#include <sys/socket.h>
+#include <thread>
+#include <unistd.h>
 #include <vector>
 
-int main() {
-    const int server_id = create_server_socket(3333);
-    if (server_id == -1) {
-        return 1;
-    }
+using namespace std;
 
-    const int client_id = accept_client(server_id);
-    if (client_id == -1) {
-        close_socket(server_id);
-        return 1;
-    }
+int main(void) {
 
-    constexpr std::size_t message_size = 10;
-    const std::string close_message = "close_conn";
-    std::vector<std::string> messages;
-    std::string received_message;
+  char random_letter = 'k';
+  // wpisz wszystkie kategorie
+  vector<string> categories = {"IMIE", "NAZWISKO", "MIASTO"};
 
-    while (read_from_socket(client_id, received_message, message_size)) {
-        if (received_message == close_message) {
-            break;
-        }
-        messages.push_back(received_message);
-    }
+  int server_socket = create_server_socket(3333);
 
-    std::cout << messages.size() << '\n';
-    for (const std::string& message : messages) {
-        std::cout << message << '\n';
-    }
+  vector<vector<string>> messages;
+  mutex message_mutex;
 
-    close_socket(client_id);
-    close_socket(server_id);
-    return 0;
+  while (true) {
+    int clientId = accept_client(server_socket);
+
+    thread t1(handleClient, clientId, ref(messages), ref(message_mutex),
+              random_letter, ref(categories));
+    t1.detach();
+  }
+
+  close(server_socket);
+
+  return 0;
 }

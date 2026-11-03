@@ -1,4 +1,4 @@
-/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/client.dir
-/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/server.dir
-/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/edit_cache.dir
-/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/Pa-stwa_miasta/build/CMakeFiles/client.dir
+/mnt/d/Pa-stwa_miasta/build/CMakeFiles/server.dir
+/mnt/d/Pa-stwa_miasta/build/CMakeFiles/edit_cache.dir
+/mnt/d/Pa-stwa_miasta/build/CMakeFiles/rebuild_cache.dir
