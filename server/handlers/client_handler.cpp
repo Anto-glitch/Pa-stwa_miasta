@@ -6,7 +6,7 @@
 #include <mutex>
 
 #include "../systems/server_connection.hpp"
-#include "../utils/utills.hpp"
+#include "../utils/utils.hpp"
 #include "../systems/socket_message.hpp"
 
 using namespace std;
