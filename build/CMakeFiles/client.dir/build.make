@@ -146,7 +146,6 @@ client: CMakeFiles/client.dir/build.make
 client: CMakeFiles/client.dir/compiler_depend.ts
 client: /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.3.0.2
 client: /usr/lib/x86_64-linux-gnu/libsfml-window.so.3.0.2
-client: /usr/lib/x86_64-linux-gnu/libsfml-network.so.3.0.2
 client: /usr/lib/x86_64-linux-gnu/libsfml-system.so.3.0.2
 client: CMakeFiles/client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable client"

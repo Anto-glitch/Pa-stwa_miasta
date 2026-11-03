@@ -187,4 +187,7 @@ CMakeFiles/server.dir/server/server.cpp.o: \
  /usr/include/c++/15/bits/stl_vector.h \
  /usr/include/c++/15/bits/stl_bvector.h \
  /usr/include/c++/15/bits/vector.tcc \
- /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/server_connection.hpp
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/server_connection.hpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/utils/utills.hpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_message.hpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/handlers/client_handler.hpp

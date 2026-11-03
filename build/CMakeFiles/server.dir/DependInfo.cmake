@@ -8,9 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/handlers/client_handler.cpp" "CMakeFiles/server.dir/server/handlers/client_handler.cpp.o" "gcc" "CMakeFiles/server.dir/server/handlers/client_handler.cpp.o.d"
   "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/server.cpp" "CMakeFiles/server.dir/server/server.cpp.o" "gcc" "CMakeFiles/server.dir/server/server.cpp.o.d"
   "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/server_connection.cpp" "CMakeFiles/server.dir/server/systems/server_connection.cpp.o" "gcc" "CMakeFiles/server.dir/server/systems/server_connection.cpp.o.d"
-  "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_read.cpp" "CMakeFiles/server.dir/server/systems/socket_read.cpp.o" "gcc" "CMakeFiles/server.dir/server/systems/socket_read.cpp.o.d"
+  "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_message.cpp" "CMakeFiles/server.dir/server/systems/socket_message.cpp.o" "gcc" "CMakeFiles/server.dir/server/systems/socket_message.cpp.o.d"
+  "/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/utils/utils.cpp" "CMakeFiles/server.dir/server/utils/utils.cpp.o" "gcc" "CMakeFiles/server.dir/server/utils/utils.cpp.o.d"
   "" "server" "gcc" "CMakeFiles/server.dir/link.d"
   )
 

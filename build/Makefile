@@ -245,6 +245,30 @@ client/systems/socket_write.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client/systems/socket_write.cpp.s
 .PHONY : client/systems/socket_write.cpp.s
 
+server/handlers/client_handler.o: server/handlers/client_handler.cpp.o
+.PHONY : server/handlers/client_handler.o
+
+# target to build an object file
+server/handlers/client_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/handlers/client_handler.cpp.o
+.PHONY : server/handlers/client_handler.cpp.o
+
+server/handlers/client_handler.i: server/handlers/client_handler.cpp.i
+.PHONY : server/handlers/client_handler.i
+
+# target to preprocess a source file
+server/handlers/client_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/handlers/client_handler.cpp.i
+.PHONY : server/handlers/client_handler.cpp.i
+
+server/handlers/client_handler.s: server/handlers/client_handler.cpp.s
+.PHONY : server/handlers/client_handler.s
+
+# target to generate assembly for a file
+server/handlers/client_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/handlers/client_handler.cpp.s
+.PHONY : server/handlers/client_handler.cpp.s
+
 server/server.o: server/server.cpp.o
 .PHONY : server/server.o
 
@@ -293,29 +317,53 @@ server/systems/server_connection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/server_connection.cpp.s
 .PHONY : server/systems/server_connection.cpp.s
 
-server/systems/socket_read.o: server/systems/socket_read.cpp.o
-.PHONY : server/systems/socket_read.o
+server/systems/socket_message.o: server/systems/socket_message.cpp.o
+.PHONY : server/systems/socket_message.o
 
 # target to build an object file
-server/systems/socket_read.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/socket_read.cpp.o
-.PHONY : server/systems/socket_read.cpp.o
+server/systems/socket_message.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/socket_message.cpp.o
+.PHONY : server/systems/socket_message.cpp.o
 
-server/systems/socket_read.i: server/systems/socket_read.cpp.i
-.PHONY : server/systems/socket_read.i
+server/systems/socket_message.i: server/systems/socket_message.cpp.i
+.PHONY : server/systems/socket_message.i
 
 # target to preprocess a source file
-server/systems/socket_read.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/socket_read.cpp.i
-.PHONY : server/systems/socket_read.cpp.i
+server/systems/socket_message.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/socket_message.cpp.i
+.PHONY : server/systems/socket_message.cpp.i
 
-server/systems/socket_read.s: server/systems/socket_read.cpp.s
-.PHONY : server/systems/socket_read.s
+server/systems/socket_message.s: server/systems/socket_message.cpp.s
+.PHONY : server/systems/socket_message.s
 
 # target to generate assembly for a file
-server/systems/socket_read.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/socket_read.cpp.s
-.PHONY : server/systems/socket_read.cpp.s
+server/systems/socket_message.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/socket_message.cpp.s
+.PHONY : server/systems/socket_message.cpp.s
+
+server/utils/utils.o: server/utils/utils.cpp.o
+.PHONY : server/utils/utils.o
+
+# target to build an object file
+server/utils/utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/utils/utils.cpp.o
+.PHONY : server/utils/utils.cpp.o
+
+server/utils/utils.i: server/utils/utils.cpp.i
+.PHONY : server/utils/utils.i
+
+# target to preprocess a source file
+server/utils/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/utils/utils.cpp.i
+.PHONY : server/utils/utils.cpp.i
+
+server/utils/utils.s: server/utils/utils.cpp.s
+.PHONY : server/utils/utils.s
+
+# target to generate assembly for a file
+server/utils/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/utils/utils.cpp.s
+.PHONY : server/utils/utils.cpp.s
 
 # Help Target
 help:
@@ -340,15 +388,21 @@ help:
 	@echo "... client/systems/socket_write.o"
 	@echo "... client/systems/socket_write.i"
 	@echo "... client/systems/socket_write.s"
+	@echo "... server/handlers/client_handler.o"
+	@echo "... server/handlers/client_handler.i"
+	@echo "... server/handlers/client_handler.s"
 	@echo "... server/server.o"
 	@echo "... server/server.i"
 	@echo "... server/server.s"
 	@echo "... server/systems/server_connection.o"
 	@echo "... server/systems/server_connection.i"
 	@echo "... server/systems/server_connection.s"
-	@echo "... server/systems/socket_read.o"
-	@echo "... server/systems/socket_read.i"
-	@echo "... server/systems/socket_read.s"
+	@echo "... server/systems/socket_message.o"
+	@echo "... server/systems/socket_message.i"
+	@echo "... server/systems/socket_message.s"
+	@echo "... server/utils/utils.o"
+	@echo "... server/utils/utils.i"
+	@echo "... server/utils/utils.s"
 .PHONY : help
 
 

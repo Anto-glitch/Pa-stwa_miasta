@@ -1,7 +1,7 @@
-CMakeFiles/server.dir/server/systems/socket_read.cpp.o: \
- /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_read.cpp \
+CMakeFiles/server.dir/server/systems/socket_message.cpp.o: \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_message.cpp \
  /usr/include/stdc-predef.h \
- /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_read.hpp \
+ /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_message.hpp \
  /usr/include/c++/15/cstddef \
  /usr/include/x86_64-linux-gnu/c++/15/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/15/bits/os_defines.h \
