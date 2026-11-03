@@ -86,46 +86,46 @@ CMakeFiles/server.dir/server/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/server/server.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/server.cpp -o CMakeFiles/server.dir/server/server.cpp.s
 
-CMakeFiles/server.dir/server/server_connection.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/server/server_connection.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/server_connection.cpp
-CMakeFiles/server.dir/server/server_connection.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/server/server_connection.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/server/server_connection.cpp.o -MF CMakeFiles/server.dir/server/server_connection.cpp.o.d -o CMakeFiles/server.dir/server/server_connection.cpp.o -c /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/server_connection.cpp
+CMakeFiles/server.dir/server/systems/server_connection.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/server/systems/server_connection.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/server_connection.cpp
+CMakeFiles/server.dir/server/systems/server_connection.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/server.dir/server/systems/server_connection.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/server/systems/server_connection.cpp.o -MF CMakeFiles/server.dir/server/systems/server_connection.cpp.o.d -o CMakeFiles/server.dir/server/systems/server_connection.cpp.o -c /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/server_connection.cpp
 
-CMakeFiles/server.dir/server/server_connection.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/server/server_connection.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/server_connection.cpp > CMakeFiles/server.dir/server/server_connection.cpp.i
+CMakeFiles/server.dir/server/systems/server_connection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/server/systems/server_connection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/server_connection.cpp > CMakeFiles/server.dir/server/systems/server_connection.cpp.i
 
-CMakeFiles/server.dir/server/server_connection.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/server/server_connection.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/server_connection.cpp -o CMakeFiles/server.dir/server/server_connection.cpp.s
+CMakeFiles/server.dir/server/systems/server_connection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/server/systems/server_connection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/server_connection.cpp -o CMakeFiles/server.dir/server/systems/server_connection.cpp.s
 
-CMakeFiles/server.dir/server/socket_read.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/server/socket_read.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/socket_read.cpp
-CMakeFiles/server.dir/server/socket_read.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/server/socket_read.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/server/socket_read.cpp.o -MF CMakeFiles/server.dir/server/socket_read.cpp.o.d -o CMakeFiles/server.dir/server/socket_read.cpp.o -c /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/socket_read.cpp
+CMakeFiles/server.dir/server/systems/socket_read.cpp.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/server/systems/socket_read.cpp.o: /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_read.cpp
+CMakeFiles/server.dir/server/systems/socket_read.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/server/systems/socket_read.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/server/systems/socket_read.cpp.o -MF CMakeFiles/server.dir/server/systems/socket_read.cpp.o.d -o CMakeFiles/server.dir/server/systems/socket_read.cpp.o -c /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_read.cpp
 
-CMakeFiles/server.dir/server/socket_read.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/server/socket_read.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/socket_read.cpp > CMakeFiles/server.dir/server/socket_read.cpp.i
+CMakeFiles/server.dir/server/systems/socket_read.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/server/systems/socket_read.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_read.cpp > CMakeFiles/server.dir/server/systems/socket_read.cpp.i
 
-CMakeFiles/server.dir/server/socket_read.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/server/socket_read.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/socket_read.cpp -o CMakeFiles/server.dir/server/socket_read.cpp.s
+CMakeFiles/server.dir/server/systems/socket_read.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/server/systems/socket_read.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/server/systems/socket_read.cpp -o CMakeFiles/server.dir/server/systems/socket_read.cpp.s
 
 # Object files for target server
 server_OBJECTS = \
 "CMakeFiles/server.dir/server/server.cpp.o" \
-"CMakeFiles/server.dir/server/server_connection.cpp.o" \
-"CMakeFiles/server.dir/server/socket_read.cpp.o"
+"CMakeFiles/server.dir/server/systems/server_connection.cpp.o" \
+"CMakeFiles/server.dir/server/systems/socket_read.cpp.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
 server: CMakeFiles/server.dir/server/server.cpp.o
-server: CMakeFiles/server.dir/server/server_connection.cpp.o
-server: CMakeFiles/server.dir/server/socket_read.cpp.o
+server: CMakeFiles/server.dir/server/systems/server_connection.cpp.o
+server: CMakeFiles/server.dir/server/systems/socket_read.cpp.o
 server: CMakeFiles/server.dir/build.make
 server: CMakeFiles/server.dir/compiler_depend.ts
 server: /usr/lib/x86_64-linux-gnu/libsfml-network.so.3.0.2

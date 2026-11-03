@@ -269,53 +269,53 @@ server/server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/server.cpp.s
 .PHONY : server/server.cpp.s
 
-server/server_connection.o: server/server_connection.cpp.o
-.PHONY : server/server_connection.o
+server/systems/server_connection.o: server/systems/server_connection.cpp.o
+.PHONY : server/systems/server_connection.o
 
 # target to build an object file
-server/server_connection.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/server_connection.cpp.o
-.PHONY : server/server_connection.cpp.o
+server/systems/server_connection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/server_connection.cpp.o
+.PHONY : server/systems/server_connection.cpp.o
 
-server/server_connection.i: server/server_connection.cpp.i
-.PHONY : server/server_connection.i
+server/systems/server_connection.i: server/systems/server_connection.cpp.i
+.PHONY : server/systems/server_connection.i
 
 # target to preprocess a source file
-server/server_connection.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/server_connection.cpp.i
-.PHONY : server/server_connection.cpp.i
+server/systems/server_connection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/server_connection.cpp.i
+.PHONY : server/systems/server_connection.cpp.i
 
-server/server_connection.s: server/server_connection.cpp.s
-.PHONY : server/server_connection.s
+server/systems/server_connection.s: server/systems/server_connection.cpp.s
+.PHONY : server/systems/server_connection.s
 
 # target to generate assembly for a file
-server/server_connection.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/server_connection.cpp.s
-.PHONY : server/server_connection.cpp.s
+server/systems/server_connection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/server_connection.cpp.s
+.PHONY : server/systems/server_connection.cpp.s
 
-server/socket_read.o: server/socket_read.cpp.o
-.PHONY : server/socket_read.o
+server/systems/socket_read.o: server/systems/socket_read.cpp.o
+.PHONY : server/systems/socket_read.o
 
 # target to build an object file
-server/socket_read.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/socket_read.cpp.o
-.PHONY : server/socket_read.cpp.o
+server/systems/socket_read.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/socket_read.cpp.o
+.PHONY : server/systems/socket_read.cpp.o
 
-server/socket_read.i: server/socket_read.cpp.i
-.PHONY : server/socket_read.i
+server/systems/socket_read.i: server/systems/socket_read.cpp.i
+.PHONY : server/systems/socket_read.i
 
 # target to preprocess a source file
-server/socket_read.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/socket_read.cpp.i
-.PHONY : server/socket_read.cpp.i
+server/systems/socket_read.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/socket_read.cpp.i
+.PHONY : server/systems/socket_read.cpp.i
 
-server/socket_read.s: server/socket_read.cpp.s
-.PHONY : server/socket_read.s
+server/systems/socket_read.s: server/systems/socket_read.cpp.s
+.PHONY : server/systems/socket_read.s
 
 # target to generate assembly for a file
-server/socket_read.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/socket_read.cpp.s
-.PHONY : server/socket_read.cpp.s
+server/systems/socket_read.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/systems/socket_read.cpp.s
+.PHONY : server/systems/socket_read.cpp.s
 
 # Help Target
 help:
@@ -343,12 +343,12 @@ help:
 	@echo "... server/server.o"
 	@echo "... server/server.i"
 	@echo "... server/server.s"
-	@echo "... server/server_connection.o"
-	@echo "... server/server_connection.i"
-	@echo "... server/server_connection.s"
-	@echo "... server/socket_read.o"
-	@echo "... server/socket_read.i"
-	@echo "... server/socket_read.s"
+	@echo "... server/systems/server_connection.o"
+	@echo "... server/systems/server_connection.i"
+	@echo "... server/systems/server_connection.s"
+	@echo "... server/systems/socket_read.o"
+	@echo "... server/systems/socket_read.i"
+	@echo "... server/systems/socket_read.s"
 .PHONY : help
 
 

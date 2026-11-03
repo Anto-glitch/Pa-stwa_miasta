@@ -10,8 +10,9 @@ add_executable(client
 
 add_executable(server
     server/server.cpp
-    server/server_connection.cpp
-    server/socket_read.cpp
+    server/systems/server_connection.cpp
+    server/systems/socket_read.cpp
+    server/utils/utils.cpp
 )
 
 find_package(SFML 3.0 COMPONENTS Graphics Window System Network REQUIRED)
@@ -20,10 +21,8 @@ target_link_libraries(client PRIVATE
     SFML::Graphics
     SFML::Window
     SFML::System
-    SFML::Network
 )
 
 target_link_libraries(server PRIVATE
     SFML::System
-    SFML::Network
 )

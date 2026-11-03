@@ -12,6 +12,13 @@ int create_server_socket(int port_number) {
         return -1;
     }
 
+    int option = 1;
+    if (setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &option, sizeof(option)) == -1) {
+        perror("Setting socket options failed");
+        close(server_socket);
+        return -1;
+    }
+
     sockaddr_in server_addr{};
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(port_number);
