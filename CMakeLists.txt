@@ -12,6 +12,7 @@ add_executable(server
     server/server.cpp
     server/server_connection.cpp
     server/socket_read.cpp
+    server/utils/utils.cpp
 )
 
 find_package(SFML 3.0 COMPONENTS Graphics Window System Network REQUIRED)

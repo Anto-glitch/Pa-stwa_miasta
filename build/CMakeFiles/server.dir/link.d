@@ -5,6 +5,7 @@ server: \
   CMakeFiles/server.dir/server/server.cpp.o \
   CMakeFiles/server.dir/server/server_connection.cpp.o \
   CMakeFiles/server.dir/server/socket_read.cpp.o \
+  CMakeFiles/server.dir/server/utils/utils.cpp.o \
   /usr/local/lib/libsfml-network.so.3.0.0 \
   /usr/local/lib/libsfml-system.so.3.0.0 \
   /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so \
@@ -47,6 +48,8 @@ CMakeFiles/server.dir/server/server.cpp.o:
 CMakeFiles/server.dir/server/server_connection.cpp.o:
 
 CMakeFiles/server.dir/server/socket_read.cpp.o:
+
+CMakeFiles/server.dir/server/utils/utils.cpp.o:
 
 /usr/local/lib/libsfml-network.so.3.0.0:
 

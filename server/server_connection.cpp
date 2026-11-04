@@ -1,4 +1,5 @@
 #include "server_connection.hpp"
+#include "utils/utils.hpp"
 
 #include <cstddef>
 #include <cstdio>
@@ -54,16 +55,6 @@ void close_socket(int socket) {
     close(socket);
 }
 
-void display_answers(vector<vector<string>> &messages) {
-  for (size_t i = 0; i < messages.size(); i++) {
-    cout << "Gracz " << i + 1 << ": ";
-    for (size_t j = 0; j < messages[i].size(); j++) {
-      cout << "[" << messages[i][j] << "] ";
-    }
-    cout << endl;
-  }
-}
-
 void handleClient(int clientId, vector<vector<string>> &messages,
                   mutex &message_mutex, char random_letter,
                   vector<string> categories) {
@@ -73,6 +64,9 @@ void handleClient(int clientId, vector<vector<string>> &messages,
   char buffer[1024];
   int turns = 0;
   bool client_closed = false;
+
+  string letter_announce = "Wylosowana litera: " + string(1, random_letter) + "\n";
+  write(clientId, letter_announce.c_str(), letter_announce.length());
 
   while (turns < categories.size() && !client_closed) {
 
@@ -104,7 +98,15 @@ void handleClient(int clientId, vector<vector<string>> &messages,
 
       accumulated_text.erase(0, pos + 1);
 
-      if (line.empty() || line[0] != random_letter) {
+      if (line.empty()) {
+        break;
+      }
+
+      if (line[0] >= 'a' && line[0] <= 'z') {
+        line[0] -= 32;
+      }
+
+      if (line[0] != random_letter) {
         break;
       }
 

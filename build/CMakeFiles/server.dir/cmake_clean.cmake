@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/server/server_connection.cpp.o.d"
   "CMakeFiles/server.dir/server/socket_read.cpp.o"
   "CMakeFiles/server.dir/server/socket_read.cpp.o.d"
+  "CMakeFiles/server.dir/server/utils/utils.cpp.o"
+  "CMakeFiles/server.dir/server/utils/utils.cpp.o.d"
   "server"
   "server.pdb"
 )

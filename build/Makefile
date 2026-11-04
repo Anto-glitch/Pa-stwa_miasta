@@ -317,6 +317,30 @@ server/socket_read.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/socket_read.cpp.s
 .PHONY : server/socket_read.cpp.s
 
+server/utils/utils.o: server/utils/utils.cpp.o
+.PHONY : server/utils/utils.o
+
+# target to build an object file
+server/utils/utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/utils/utils.cpp.o
+.PHONY : server/utils/utils.cpp.o
+
+server/utils/utils.i: server/utils/utils.cpp.i
+.PHONY : server/utils/utils.i
+
+# target to preprocess a source file
+server/utils/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/utils/utils.cpp.i
+.PHONY : server/utils/utils.cpp.i
+
+server/utils/utils.s: server/utils/utils.cpp.s
+.PHONY : server/utils/utils.s
+
+# target to generate assembly for a file
+server/utils/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/utils/utils.cpp.s
+.PHONY : server/utils/utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -349,6 +373,9 @@ help:
 	@echo "... server/socket_read.o"
 	@echo "... server/socket_read.i"
 	@echo "... server/socket_read.s"
+	@echo "... server/utils/utils.o"
+	@echo "... server/utils/utils.i"
+	@echo "... server/utils/utils.s"
 .PHONY : help
 
 

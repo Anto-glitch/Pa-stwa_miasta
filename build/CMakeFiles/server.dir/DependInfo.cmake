@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/d/Pa-stwa_miasta/server/server.cpp" "CMakeFiles/server.dir/server/server.cpp.o" "gcc" "CMakeFiles/server.dir/server/server.cpp.o.d"
   "/mnt/d/Pa-stwa_miasta/server/server_connection.cpp" "CMakeFiles/server.dir/server/server_connection.cpp.o" "gcc" "CMakeFiles/server.dir/server/server_connection.cpp.o.d"
   "/mnt/d/Pa-stwa_miasta/server/socket_read.cpp" "CMakeFiles/server.dir/server/socket_read.cpp.o" "gcc" "CMakeFiles/server.dir/server/socket_read.cpp.o.d"
+  "/mnt/d/Pa-stwa_miasta/server/utils/utils.cpp" "CMakeFiles/server.dir/server/utils/utils.cpp.o" "gcc" "CMakeFiles/server.dir/server/utils/utils.cpp.o.d"
   "" "server" "gcc" "CMakeFiles/server.dir/link.d"
   )
 
