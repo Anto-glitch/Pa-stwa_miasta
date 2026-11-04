@@ -1,3 +1,9 @@
+#include "utils/utils.hpp"
+#include "systems/server_connection.hpp"
+#include "systems/socket_message.hpp"
+#include "handlers/client_handler.hpp"
+
+
 #include <cstddef>
 #include <cstdio>
 #include <cstdlib>
@@ -12,15 +18,14 @@
 #include <vector>
 
 
-#include "systems/server_connection.hpp"
-#include "systems/socket_message.hpp"
-#include "handlers/client_handler.hpp"
 
 using namespace std;
 
 int main(void) {
 
-  char random_letter = 'k';
+  char random_letter = generateRandomChar();
+  cout << "Wylosowana litera: " << random_letter << endl;
+
   // wpisz wszystkie kategorie
   vector<string> categories = {"IMIE", "NAZWISKO", "MIASTO", "ROSLINA"};
 
