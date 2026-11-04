@@ -5,25 +5,25 @@ add_executable(client
     client/client.cpp
     client/screens/image_sprite.cpp
     client/systems/socket_connection.cpp
-    client/systems/socket_write.cpp
+    client/systems/socket_message.cpp
 )
 
 add_executable(server
     server/server.cpp
-    server/server_connection.cpp
-    server/socket_read.cpp
+    server/systems/server_connection.cpp
+    server/systems/socket_message.cpp
+    server/utils/utils.cpp
+    server/handlers/client_handler.cpp
 )
 
-find_package(SFML 3.0 COMPONENTS Graphics Window System Network REQUIRED)
+find_package(SFML 3.0 COMPONENTS Graphics Window System REQUIRED)
 
 target_link_libraries(client PRIVATE
     SFML::Graphics
     SFML::Window
     SFML::System
-    SFML::Network
 )
 
 target_link_libraries(server PRIVATE
     SFML::System
-    SFML::Network
 )
