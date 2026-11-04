@@ -16,7 +16,7 @@ add_executable(server
     server/handlers/client_handler.cpp
 )
 
-find_package(SFML 3.0 COMPONENTS Graphics Window System Network REQUIRED)
+find_package(SFML 3.0 COMPONENTS Graphics Window System REQUIRED)
 
 target_link_libraries(client PRIVATE
     SFML::Graphics
