@@ -6,6 +6,8 @@
 #include <iostream>
 #include <optional>
 #include <vector>
+#include <memory>
+#include <string>
 
 using namespace std;
 
@@ -21,7 +23,7 @@ int main()
 
     sf::RenderWindow window(sf::VideoMode({800, 600}), "Client Window");
 
-    vector<sf::Texture> textures;
+    vector<std::unique_ptr<sf::Texture>> textures;
     vector<sf::Sprite> screens;
     const vector<string> screenFiles = {
         "../assets/startScreen.png",
@@ -34,10 +36,10 @@ int main()
         return 1;
     }
 
-    vector<sf::Texture> moduleTextures;
+    vector<std::unique_ptr<sf::Texture>> moduleTextures;
     vector<sf::Sprite> modules;
 
-    if (!generateOtherSpritesFromFiles(
+    if (!generateModuleSpritesFromFiles(
             moduleTextures, modules)) {
         std::cerr << "Failed to load interface modules." << std::endl;
         return 1;
