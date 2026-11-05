@@ -5,8 +5,23 @@
 #include <string>
 #include <iostream>
 #include <cstddef>
+#include <cctype>
+#include <algorithm>
 
 using namespace std;
+
+std::string capitalize(std::string str) {
+    if (str.empty()) {
+        return str;
+    }
+
+    str[0] = std::toupper(static_cast<unsigned char>(str[0]));
+
+    std::transform(str.begin() + 1, str.end(), str.begin() + 1,
+                   [](unsigned char c) { return std::tolower(c); });
+
+    return str;
+}
 
 char generateRandomChar(){
     static constexpr string_view possibleCharacters = "ABCDEFGHIJKLMNOPRSTUWZ";
