@@ -1,5 +1,8 @@
 #include "image_sprite.hpp"
 
+#include <memory>
+#include <vector>
+#include <string>
 #include <iostream>
 
 std::optional<sf::Sprite> generateImageSprite(
@@ -23,4 +26,47 @@ std::optional<sf::Sprite> generateImageSprite(
     });
 
     return sprite;
+}
+
+bool generateScreenSpritesFromFiles(
+    const std::vector<std::string>& filenames,
+    std::vector<std::unique_ptr<sf::Texture>>& textures,
+    std::vector<sf::Sprite>& sprites,
+    const sf::Vector2f& position,
+    const sf::Vector2f& size)
+{
+    textures.clear();
+    sprites.clear();
+    textures.reserve(filenames.size());
+    sprites.reserve(filenames.size());
+
+    for (const auto& filename : filenames) {
+        std::unique_ptr<sf::Texture> texture = std::make_unique<sf::Texture>();
+        auto spriteOpt = generateImageSprite(*texture, filename, position, size);
+        textures.push_back(std::move(texture));
+        if (!spriteOpt) {
+            std::cerr << "Failed to generate sprite from file: " << filename << '\n';
+            return false;
+        }
+        sprites.push_back(std::move(spriteOpt.value()));
+    }
+
+    return true;
+}
+
+bool generateModuleSpritesFromFiles(
+    std::vector<std::unique_ptr<sf::Texture>>& textures,
+    std::vector<sf::Sprite>& sprites)
+{
+    textures.clear();
+    sprites.clear();
+        std::unique_ptr<sf::Texture> texture = std::make_unique<sf::Texture>();
+        auto spriteOpt = generateImageSprite(*texture, "../assets/button.png", {300.f, 495.f}, {180.f, 80.f});
+        if(!spriteOpt) {
+            std::cerr << "Failed to generate sprite from texture\n";
+            return false;
+        }
+        textures.push_back(std::move(texture));
+        sprites.push_back(std::move(spriteOpt.value()));
+    return true;
 }

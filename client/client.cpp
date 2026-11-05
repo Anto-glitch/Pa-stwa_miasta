@@ -1,15 +1,15 @@
 #include "screens/image_sprite.hpp"
 #include "systems/socket_connection.hpp"
-#include "systems/socket_write.hpp"
+#include "systems/socket_message.hpp"
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <optional>
 #include <vector>
+#include <memory>
+#include <string>
 
 using namespace std;
-
-
 
 int main()
 {
@@ -23,21 +23,28 @@ int main()
 
     sf::RenderWindow window(sf::VideoMode({800, 600}), "Client Window");
 
-    vector<sf::Texture> textures;
-
-    sf::Texture startScreenTexture;
-    const auto startScreen = generateImageSprite(
-        startScreenTexture,
+    vector<std::unique_ptr<sf::Texture>> textures;
+    vector<sf::Sprite> screens;
+    const vector<string> screenFiles = {
         "../assets/startScreen.png",
-        {0.f, 0.f},
-        {800.f, 600.f}
-    );
-    
+        "../assets/gameScreen.png"
+    };
 
-    if (!startScreen) {
-        std::cerr << "Failed to load start screen image." << std::endl;
+    if (!generateScreenSpritesFromFiles(
+            screenFiles, textures, screens, {0.f, 0.f}, {800.f, 600.f})) {
+        std::cerr << "Failed to load screen images." << std::endl;
         return 1;
     }
+
+    vector<std::unique_ptr<sf::Texture>> moduleTextures;
+    vector<sf::Sprite> modules;
+
+    if (!generateModuleSpritesFromFiles(
+            moduleTextures, modules)) {
+        std::cerr << "Failed to load interface modules." << std::endl;
+        return 1;
+    }
+
     //todo : add function to load and generate sprites for other screens (waiting room, game, election, results)
     
     const int socket_id = create_socket();
@@ -118,7 +125,26 @@ int main()
 
 
         window.clear(sf::Color::Black);
-        window.draw(*startScreen);
+
+        switch(currentState) {
+        case GameState::START_SCREEN:
+            window.draw(screens[0]);
+            window.draw(modules[0]); // Draw the exit button
+            break;
+        case GameState::WAITING_ROOM:
+            //window.draw(screens[]); //
+            break;      
+        case GameState::GAME:
+            window.draw(screens[1]);
+            break;
+        case GameState::ELECTION:
+            // render election screen
+            break;
+        case GameState::RESULTS:
+            // render results screen
+            break;
+        }
+        
         window.display();
     }
 

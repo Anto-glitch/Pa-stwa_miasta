@@ -5,7 +5,6 @@
 #include <string>
 #include <iostream>
 #include <cstddef>
-#include <array>
 
 using namespace std;
 
