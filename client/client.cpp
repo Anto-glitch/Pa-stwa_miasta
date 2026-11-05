@@ -73,6 +73,7 @@ int main()
                         }
                         else{
                             close_connection(socket_id);
+                            currentState = GameState::START_SCREEN;
                         }
 
                     }
@@ -149,10 +150,10 @@ int main()
         switch(currentState) {
         case GameState::START_SCREEN:
             window.draw(screens[0]);
-            window.draw(modules[0]); // Draw the exit button
+            window.draw(modules[0]);
             break;
         case GameState::WAITING_ROOM:
-            //window.draw(screens[]); //
+            window.draw(screens[1]); //
             break;
         case GameState::GAME:
             window.draw(screens[1]);
@@ -164,6 +165,8 @@ int main()
             // render results screen
             break;
         }
+        //draw exit button on all screens
+        window.draw(modules[1]);
 
         window.display();
     }
