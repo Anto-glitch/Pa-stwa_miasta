@@ -46,14 +46,11 @@ int main()
     }
 
     //todo : add function to load and generate sprites for other screens (waiting room, game, election, results)
-    
+
     const int socket_id = create_socket();
     if (socket_id == -1)
         return 1;
-    if (!create_connection(socket_id, 3333, "127.0.0.1")) {
-        std::cerr << "Failed to connect to server." << std::endl;
-        return 1;
-    }
+
 
     GameState currentState = GameState::START_SCREEN;
     while (window.isOpen()) {
@@ -63,14 +60,27 @@ int main()
             if (event->is<sf::Event::Closed>()) {
                 window.close();
             }
-            
+
             else if (const auto* mouseEvent =
                          event->getIf<sf::Event::MouseButtonPressed>()) {
                 if (mouseEvent->button == sf::Mouse::Button::Left) {
-                    // handle exit button or disconnect button click
+                    //exit button handling
+                    sf::Vector2i mousePos = sf::Mouse::getPosition( window );
+                    sf::Vector2f mousePosF(mousePos);
+                    if(modules[1].getGlobalBounds().contains(mousePosF)) {
+                        if (currentState == GameState::START_SCREEN) {
+                            window.close();
+                        }
+                        else{
+                            close_connection(socket_id);
+                        }
+
+                    }
                 }
             }
-            
+
+
+
 
             switch(currentState) {
             case GameState::START_SCREEN:
@@ -78,9 +88,19 @@ int main()
                 //set only events crucial for each state, to avoid unnecessary event handling
                 if (const auto* mouseEvent =
                          event->getIf<sf::Event::MouseButtonPressed>()) {
-                    if (mouseEvent->button == sf::Mouse::Button::Left) 
+                    if (mouseEvent->button == sf::Mouse::Button::Left)
                     {
-                    // add code to handle connect button click)
+                        //connect button handling
+                        sf::Vector2i mousePos = sf::Mouse::getPosition( window );
+                        sf::Vector2f mousePosF(mousePos);
+                        if(modules[0].getGlobalBounds().contains(mousePosF)) {
+                            if (!create_connection(socket_id, 3333, "127.0.0.1")) {
+                                std::cerr << "Failed to connect to server." << std::endl;
+                                return 1;
+                            }
+                            currentState = GameState::WAITING_ROOM;
+                        }
+
                     }
                 }
                 break;
@@ -133,7 +153,7 @@ int main()
             break;
         case GameState::WAITING_ROOM:
             //window.draw(screens[]); //
-            break;      
+            break;
         case GameState::GAME:
             window.draw(screens[1]);
             break;
@@ -144,7 +164,7 @@ int main()
             // render results screen
             break;
         }
-        
+
         window.display();
     }
 
