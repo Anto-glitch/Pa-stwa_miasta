@@ -22,6 +22,10 @@ void handleClient(int clientId, vector<vector<string>> &messages,
   int turns = 0;
   bool client_closed = false;
 
+  string letter_announce =
+        "Wylosowana litera to " + string(1, random_letter) +"\n";
+    write_to_socket(clientId, letter_announce);
+
   while (turns < categories.size() && !client_closed) {
 
     string prompt =
@@ -47,7 +51,13 @@ void handleClient(int clientId, vector<vector<string>> &messages,
 
       accumulated_text.erase(0, pos + 1);
 
-      if (line.empty() || line[0] != random_letter) {
+      if (line.empty()){
+        break;
+      }
+
+      line = capitalize(line);
+
+      if(line[0] != random_letter){
         break;
       }
 
