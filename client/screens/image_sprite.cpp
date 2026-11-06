@@ -68,5 +68,15 @@ bool generateModuleSpritesFromFiles(
         }
         textures.push_back(std::move(texture));
         sprites.push_back(std::move(spriteOpt.value()));
+
+        texture = std::make_unique<sf::Texture>();
+        spriteOpt = generateImageSprite(*texture, "../assets/exitbutton.png", {660.f, 10.f}, {130.f, 65.f});
+        if(!spriteOpt) {
+            std::cerr << "Failed to generate sprite from texture\n";
+            return false;
+        }
+        textures.push_back(std::move(texture));
+        sprites.push_back(std::move(spriteOpt.value()));
+
     return true;
 }
