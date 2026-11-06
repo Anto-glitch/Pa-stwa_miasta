@@ -47,7 +47,7 @@ int main()
 
     //todo : add function to load and generate sprites for other screens (waiting room, game, election, results)
 
-    const int socket_id = create_socket();
+    int socket_id = create_socket();
     if (socket_id == -1)
         return 1;
 
@@ -72,7 +72,7 @@ int main()
                             window.close();
                         }
                         else{
-                            close_connection(socket_id);
+                            disconnect_connection(socket_id);
                             currentState = GameState::START_SCREEN;
                         }
 
@@ -95,11 +95,17 @@ int main()
                         sf::Vector2i mousePos = sf::Mouse::getPosition( window );
                         sf::Vector2f mousePosF(mousePos);
                         if(modules[0].getGlobalBounds().contains(mousePosF)) {
+                            if (socket_id == -1) {
+                                socket_id = create_socket();
+                            }
                             if (!create_connection(socket_id, 3333, "127.0.0.1")) {
                                 std::cerr << "Failed to connect to server." << std::endl;
-                                return 1;
+                                disconnect_connection(socket_id);
+                                break;
                             }
-                            currentState = GameState::WAITING_ROOM;
+                            else {
+                                currentState = GameState::WAITING_ROOM;
+                            }
                         }
 
                     }
@@ -172,6 +178,6 @@ int main()
     }
 
 
-    close_connection(socket_id);
+    disconnect_connection(socket_id);
     return 0;
 }
