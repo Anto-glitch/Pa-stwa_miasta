@@ -3,16 +3,23 @@
 #include "systems/socket_connection.hpp"
 #include "systems/socket_message.hpp"
 #include "screens/common/text.hpp"
+#include "screens/common/textbox.h"
+#include "screens/common/cursor.hpp"
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Window.hpp>
 #include <iostream>
 #include <optional>
 #include <vector>
 #include <memory>
+#include <functional>
 #include <string>
 #include <map>
 
 using namespace std;
+
+
+
 
 int main()
 {
@@ -25,6 +32,8 @@ int main()
     };
 
     sf::RenderWindow window(sf::VideoMode({800, 600}), "Client Window");
+
+
 
     //textures for screens
     vector<std::unique_ptr<sf::Texture>> textures;
@@ -53,16 +62,37 @@ int main()
 
     //create font
     sf::Font font = createFont();
+
+    //set textboxes
+    TextBox nicknameTextBox(font, 24, sf::Color::White, {50.f, 50.f});
+
     //create texts
     map<string, sf::Text> texts;
-    texts.insert({"Nickname", createText(" ", font, 24, sf::Color::White, {50.f, 50.f})});
+    texts.insert({"Nickname", createText(" ", font, 24, sf::Color::White, {280.f, 440.f})});
 
     //create socket
     int socket_id = create_socket();
     if (socket_id == -1)
         return 1;
+    //create cursors
+    auto arrowCursor = sf::Cursor::createFromSystem(sf::Cursor::Type::Arrow);
+    if (!arrowCursor) {
+        std::cerr << "Failed to load arrow cursor." << std::endl;
+    }
+    auto handCursor = sf::Cursor::createFromSystem(sf::Cursor::Type::Hand);
+    if (!handCursor) {
+        std::cerr << "Failed to load hand cursor." << std::endl;
+    }
+    auto textCursor = sf::Cursor::createFromSystem(sf::Cursor::Type::Text);
+    if (!textCursor) {
+        std::cerr << "Failed to load text cursor." << std::endl;
+    }    
+    if (!arrowCursor || !handCursor || !textCursor) {
+        disconnect_connection(socket_id);
+        return 1;
+    }
 
-
+    CursorType currentCursor = CursorType::Arrow;
     GameState currentState = GameState::START_SCREEN;
     while (window.isOpen()) {
 
@@ -90,9 +120,6 @@ int main()
                 }
             }
 
-
-
-
             switch(currentState) {
             case GameState::START_SCREEN:
                 //start screen
@@ -117,9 +144,16 @@ int main()
                                 currentState = GameState::WAITING_ROOM;
                             }
                         }
-
+                        if(nicknameTextBox.getGlobalBounds().contains(mousePosF)) {
+                            nicknameTextBox.setActive(true);
+                        }
+                        else {
+                            nicknameTextBox.setActive(false);
+                        }
                     }
                 }
+                if(const auto* textEvent = event->getIf<sf::Event::TextEntered>()) 
+                        nicknameTextBox.typedOn(*textEvent);
                 break;
             case GameState::WAITING_ROOM:
                 if (const auto* mouseEvent =
@@ -160,6 +194,15 @@ int main()
             }
         }
 
+        handleCursorInteractions(
+            window,
+            modules,
+            nicknameTextBox,
+            *arrowCursor,
+            *handCursor,
+            *textCursor,
+            currentCursor
+        );
 
         window.clear(sf::Color::Black);
 
@@ -168,6 +211,7 @@ int main()
             window.draw(screens[0]);
             window.draw(modules[0]);
             window.draw(modules[2]);
+            nicknameTextBox.draw(window);
             break;
         case GameState::WAITING_ROOM:
             window.draw(screens[1]); //
