@@ -1,0 +1,130 @@
+[  7%] Building CXX object CMakeFiles/server.dir/server/systems/server_connection.cpp.o
+[ 21%] Building CXX object CMakeFiles/server.dir/server/utils/utils.cpp.o
+[ 21%] Building CXX object CMakeFiles/server.dir/server/handlers/client_handler.cpp.o
+[ 28%] Building CXX object CMakeFiles/server.dir/server/server.cpp.o
+[ 35%] Building CXX object CMakeFiles/server.dir/server/systems/socket_message.cpp.o
+[ 42%] Building CXX object CMakeFiles/client.dir/client/client.cpp.o
+[ 50%] Building CXX object CMakeFiles/client.dir/client/screens/common/exit_button.cpp.o
+[ 57%] Building CXX object CMakeFiles/client.dir/client/systems/socket_connection.cpp.o
+[ 64%] Building CXX object CMakeFiles/client.dir/client/utils/utils.cpp.o
+[ 71%] Building CXX object CMakeFiles/client.dir/client/screens/generate_sprite.cpp.o
+[ 78%] Building CXX object CMakeFiles/client.dir/client/systems/socket_message.cpp.o
+[ 85%] Building CXX object CMakeFiles/client.dir/client/screens/common/create_text.cpp.o
+In file included from /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/utils/utils.cpp:1:
+/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/utils/utils.hpp:1:2: error: invalid preprocessing directive #pragma_once
+    1 | #pragma_once
+      |  ^~~~~~~~~~~
+In file included from /usr/include/c++/15/system_error:43,
+                 from /usr/include/c++/15/bits/fs_fwd.h:35,
+                 from /usr/include/c++/15/filesystem:53,
+                 from /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/utils/utils.cpp:3:
+/usr/include/x86_64-linux-gnu/c++/15/bits/error_constants.h:36:1: error: expected initializer before ‘namespace’
+   36 | namespace std _GLIBCXX_VISIBILITY(default)
+      | ^~~~~~~~~
+/usr/include/c++/15/system_error:71:36: error: ‘errc’ was not declared in this scope
+   71 |     struct is_error_condition_enum<errc>
+      |                                    ^~~~
+/usr/include/c++/15/system_error:71:40: error: template argument 1 is invalid
+   71 |     struct is_error_condition_enum<errc>
+      |                                        ^
+/usr/include/c++/15/system_error:304:19: error: ‘errc’ was not declared in this scope
+  304 |   make_error_code(errc __e) noexcept
+      |                   ^~~~
+/usr/include/c++/15/system_error:304:29: error: expected ‘,’ or ‘;’ before ‘noexcept’
+  304 |   make_error_code(errc __e) noexcept
+      |                             ^~~~~~~~
+/usr/include/c++/15/system_error:437:24: error: ‘errc’ was not declared in this scope
+  437 |   make_error_condition(errc __e) noexcept
+      |                        ^~~~
+/usr/include/c++/15/system_error:437:34: error: expected ‘,’ or ‘;’ before ‘noexcept’
+  437 |   make_error_condition(errc __e) noexcept
+      |                                  ^~~~~~~~
+In file included from /usr/include/c++/15/bits/locale_facets.h:45,
+                 from /usr/include/c++/15/locale:44,
+                 from /usr/include/c++/15/bits/fs_path.h:36,
+                 from /usr/include/c++/15/filesystem:54:
+/usr/include/c++/15/bits/ios_base.h:246:32: error: ‘std::error_code std::make_error_code(io_errc)’ redeclared as different kind of entity
+  246 |   make_error_code(io_errc __e) noexcept
+      |                                ^~~~~~~~
+/usr/include/c++/15/system_error:304:3: note: previous declaration ‘std::error_code std::make_error_code’
+  304 |   make_error_code(errc __e) noexcept
+      |   ^~~~~~~~~~~~~~~
+/usr/include/c++/15/bits/ios_base.h:251:37: error: ‘std::error_condition std::make_error_condition(io_errc)’ redeclared as different kind of entity
+  251 |   make_error_condition(io_errc __e) noexcept
+      |                                     ^~~~~~~~
+/usr/include/c++/15/system_error:437:3: note: previous declaration ‘std::error_condition std::make_error_condition’
+  437 |   make_error_condition(errc __e) noexcept
+      |   ^~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/15/bits/requires_hosted.h:31,
+                 from /usr/include/c++/15/string:40,
+                 from /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/utils/utils.hpp:3:
+/usr/include/c++/15/bits/fs_path.h: In function ‘void std::filesystem::__cxx11::__detail::__throw_conversion_error()’:
+/usr/include/c++/15/bits/fs_path.h:781:5: error: ‘errc’ was not declared in this scope
+  781 |     _GLIBCXX_THROW_OR_ABORT(filesystem_error(
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/client.dir/build.make:149: CMakeFiles/client.dir/client/utils/utils.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+[ 92%] Linking CXX executable server
+In file included from /usr/include/c++/15/bits/memory_resource.h:49,
+                 from /usr/include/c++/15/vector:91,
+                 from /usr/include/SFML/Graphics/VertexArray.hpp:38,
+                 from /usr/include/SFML/Graphics/Shape.hpp:38,
+                 from /usr/include/SFML/Graphics/CircleShape.hpp:32,
+                 from /usr/include/SFML/Graphics.hpp:32,
+                 from /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/screens/generate_sprite.hpp:3,
+                 from /home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp:1:
+/usr/include/c++/15/tuple: In instantiation of ‘std::pair<_T1, _T2>::pair(std::tuple<_Args1 ...>&, std::tuple<_Args2 ...>&, std::_Index_tuple<_Indexes1 ...>, std::_Index_tuple<_Indexes2 ...>) [with _Args1 = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&}; long unsigned int ..._Indexes1 = {0}; _Args2 = {}; long unsigned int ..._Indexes2 = {}; _T1 = const std::__cxx11::basic_string<char>; _T2 = sf::Text]’:
+/usr/include/c++/15/tuple:2876:63:   required from ‘std::pair<_T1, _T2>::pair(std::piecewise_construct_t, std::tuple<_Args1 ...>, std::tuple<_Args2 ...>) [with _Args1 = {std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&}; _Args2 = {}; _T1 = const std::__cxx11::basic_string<char>; _T2 = sf::Text]’
+ 2876 |              typename _Build_index_tuple<sizeof...(_Args2)>::__type())
+      |                                                                      ^
+/usr/include/c++/15/bits/new_allocator.h:191:4:   required from ‘void std::__new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = std::pair<const std::__cxx11::basic_string<char>, sf::Text>; _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Tp = std::_Rb_tree_node<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >]’
+  191 |         { ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/15/bits/alloc_traits.h:674:17:   required from ‘static void std::allocator_traits<std::allocator<_Tp1> >::construct(allocator_type&, _Up*, _Args&& ...) [with _Up = std::pair<const std::__cxx11::basic_string<char>, sf::Text>; _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Tp = std::_Rb_tree_node<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >; allocator_type = std::allocator<std::_Rb_tree_node<std::pair<const std::__cxx11::basic_string<char>, sf::Text> > >]’
+  674 |           __a.construct(__p, std::forward<_Args>(__args)...);
+      |           ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/15/bits/stl_tree.h:1237:37:   required from ‘void std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_construct_node(_Node_ptr, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Key = std::__cxx11::basic_string<char>; _Val = std::pair<const std::__cxx11::basic_string<char>, sf::Text>; _KeyOfValue = std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >; _Node_ptr = std::__rb_tree::_Node_traits<std::pair<const std::__cxx11::basic_string<char>, sf::Text>, std::pair<const std::__cxx11::basic_string<char>, sf::Text>*>::_Node*]’
+ 1237 |               _Node_alloc_traits::construct(_M_get_Node_allocator(),
+      |               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+ 1238 |                                             __node->_M_valptr(),
+      |                                             ~~~~~~~~~~~~~~~~~~~~
+ 1239 |                                             std::forward<_Args>(__args)...);
+      |                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/15/bits/stl_tree.h:1254:21:   required from ‘std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Node_ptr std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_create_node(_Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Key = std::__cxx11::basic_string<char>; _Val = std::pair<const std::__cxx11::basic_string<char>, sf::Text>; _KeyOfValue = std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >; _Node_ptr = std::__rb_tree::_Node_traits<std::pair<const std::__cxx11::basic_string<char>, sf::Text>, std::pair<const std::__cxx11::basic_string<char>, sf::Text>*>::_Node*]’
+ 1254 |           _M_construct_node(__tmp, std::forward<_Args>(__args)...);
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/15/bits/stl_tree.h:2285:32:   required from ‘std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_Auto_node::_Auto_node(std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Key = std::__cxx11::basic_string<char>; _Val = std::pair<const std::__cxx11::basic_string<char>, sf::Text>; _KeyOfValue = std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >]’
+ 2285 |             _M_node(__t._M_create_node(std::forward<_Args>(__args)...))
+      |                     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/15/bits/stl_tree.h:3084:13:   required from ‘std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::iterator std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>::_M_emplace_hint_unique(const_iterator, _Args&& ...) [with _Args = {const std::piecewise_construct_t&, std::tuple<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&>, std::tuple<>}; _Key = std::__cxx11::basic_string<char>; _Val = std::pair<const std::__cxx11::basic_string<char>, sf::Text>; _KeyOfValue = std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >; iterator = std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, sf::Text>, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, sf::Text> > >::iterator; const_iterator = std::_Rb_tree<std::__cxx11::basic_string<char>, std::pair<const std::__cxx11::basic_string<char>, sf::Text>, std::_Select1st<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >, std::less<std::__cxx11::basic_string<char> >, std::allocator<std::pair<const std::__cxx11::basic_string<char>, sf::Text> > >::const_iterator]’
+ 3084 |         _Auto_node __z(*this, std::forward<_Args>(__args)...);
+      |                    ^~~
+/usr/include/c++/15/bits/stl_map.h:555:37:   required from ‘std::map<_Key, _Tp, _Compare, _Alloc>::mapped_type& std::map<_Key, _Tp, _Compare, _Alloc>::operator[](key_type&&) [with _Key = std::__cxx11::basic_string<char>; _Tp = sf::Text; _Compare = std::less<std::__cxx11::basic_string<char> >; _Alloc = std::allocator<std::pair<const std::__cxx11::basic_string<char>, sf::Text> >; mapped_type = sf::Text; key_type = std::__cxx11::basic_string<char>]’
+  555 |           __i = _M_t._M_emplace_hint_unique(__i, std::piecewise_construct,
+      |                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  556 |                                         std::forward_as_tuple(std::move(__k)),
+      |                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  557 |                                         std::tuple<>());
+      |                                         ~~~~~~~~~~~~~~~
+/home/antmalecki/Antek/sieci2/projekt/Pa-stwa_miasta/client/client.cpp:58:21:   required from here
+   58 |     texts["Nickname"] = createText(" ", font, 24, sf::Color::White, {50.f, 50.f});
+      |                     ^
+/usr/include/c++/15/tuple:2887:9: error: no matching function for call to ‘sf::Text::Text()’
+ 2887 |         second(std::forward<_Args2>(std::get<_Indexes2>(__tuple2))...)
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/15/tuple:2887:9: note: there are 3 candidates
+In file included from /usr/include/SFML/Graphics.hpp:50:
+/usr/include/SFML/Graphics/Text.hpp:87:5: note: candidate 1: ‘sf::Text::Text(const sf::Font&, sf::String, unsigned int)’
+   87 |     Text(const Font& font, String string = "", unsigned int characterSize = 30);
+      |     ^~~~
+/usr/include/SFML/Graphics/Text.hpp:87:5: note: candidate expects 3 arguments, 0 provided
+/usr/include/SFML/Graphics/Text.hpp:56:25: note: candidate 2: ‘sf::Text::Text(const sf::Text&)’
+   56 | class SFML_GRAPHICS_API Text : public Drawable, public Transformable
+      |                         ^~~~
+/usr/include/SFML/Graphics/Text.hpp:56:25: note: candidate expects 1 argument, 0 provided
+/usr/include/SFML/Graphics/Text.hpp:56:25: note: candidate 3: ‘sf::Text::Text(sf::Text&&)’
+/usr/include/SFML/Graphics/Text.hpp:56:25: note: candidate expects 1 argument, 0 provided
+[ 92%] Built target server
+gmake[2]: *** [CMakeFiles/client.dir/build.make:79: CMakeFiles/client.dir/client/client.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:90: CMakeFiles/client.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2

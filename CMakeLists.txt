@@ -1,11 +1,15 @@
-cmake_minimum_required(VERSION 4.0)
-project(Panstwa_Miasta)
+cmake_minimum_required(VERSION 3.16)
+project(Panstwa_Miasta LANGUAGES CXX)
 
 add_executable(client
     client/client.cpp
-    client/screens/image_sprite.cpp
+    client/screens/generate_sprite.cpp
+    client/screens/common/exit_button.cpp
     client/systems/socket_connection.cpp
     client/systems/socket_message.cpp
+    client/utils/utils.cpp
+    client/screens/common/create_text.cpp
+
 )
 
 add_executable(server

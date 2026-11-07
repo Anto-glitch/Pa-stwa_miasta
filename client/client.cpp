@@ -1,6 +1,8 @@
-#include "screens/image_sprite.hpp"
+#include "screens/generate_sprite.hpp"
+#include "screens/common/exit_button.hpp"
 #include "systems/socket_connection.hpp"
 #include "systems/socket_message.hpp"
+#include "screens/common/text.hpp"
 
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -8,6 +10,7 @@
 #include <vector>
 #include <memory>
 #include <string>
+#include <map>
 
 using namespace std;
 
@@ -23,11 +26,12 @@ int main()
 
     sf::RenderWindow window(sf::VideoMode({800, 600}), "Client Window");
 
+    //textures for screens
     vector<std::unique_ptr<sf::Texture>> textures;
     vector<sf::Sprite> screens;
     const vector<string> screenFiles = {
-        "../assets/startScreen.png",
-        "../assets/gameScreen.png"
+        "../assets/graphics/startScreen.png",
+        "../assets/graphics/gameScreen.png"
     };
 
     if (!generateScreenSpritesFromFiles(
@@ -35,7 +39,7 @@ int main()
         std::cerr << "Failed to load screen images." << std::endl;
         return 1;
     }
-
+    //textures for modules
     vector<std::unique_ptr<sf::Texture>> moduleTextures;
     vector<sf::Sprite> modules;
 
@@ -47,6 +51,13 @@ int main()
 
     //todo : add function to load and generate sprites for other screens (waiting room, game, election, results)
 
+    //create font
+    sf::Font font = createFont();
+    //create texts
+    map<string, sf::Text> texts;
+    texts.insert({"Nickname", createText(" ", font, 24, sf::Color::White, {50.f, 50.f})});
+
+    //create socket
     int socket_id = create_socket();
     if (socket_id == -1)
         return 1;
@@ -57,25 +68,24 @@ int main()
 
         while (const std::optional event = window.pollEvent()) {
 
+            //window closed
             if (event->is<sf::Event::Closed>()) {
                 window.close();
             }
 
+            //handle exit button click
             else if (const auto* mouseEvent =
                          event->getIf<sf::Event::MouseButtonPressed>()) {
                 if (mouseEvent->button == sf::Mouse::Button::Left) {
-                    //exit button handling
-                    sf::Vector2i mousePos = sf::Mouse::getPosition( window );
-                    sf::Vector2f mousePosF(mousePos);
-                    if(modules[1].getGlobalBounds().contains(mousePosF)) {
-                        if (currentState == GameState::START_SCREEN) {
-                            window.close();
-                        }
-                        else{
-                            disconnect_connection(socket_id);
+                    if (handleExitButton(
+                            *event,
+                            window,
+                            modules[1],
+                            socket_id,
+                            currentState == GameState::START_SCREEN)) {
+                        if (currentState != GameState::START_SCREEN) {
                             currentState = GameState::START_SCREEN;
                         }
-
                     }
                 }
             }
@@ -157,6 +167,7 @@ int main()
         case GameState::START_SCREEN:
             window.draw(screens[0]);
             window.draw(modules[0]);
+            window.draw(modules[2]);
             break;
         case GameState::WAITING_ROOM:
             window.draw(screens[1]); //
