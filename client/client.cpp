@@ -64,7 +64,7 @@ int main()
     sf::Font font = createFont();
 
     //set textboxes
-    TextBox nicknameTextBox(font, 24, sf::Color::White, {50.f, 50.f});
+    TextBox nicknameTextBox(font, 24, sf::Color::White, {280.f, 425.f}, {220.f, 35.f});
 
     //create texts
     map<string, sf::Text> texts;
