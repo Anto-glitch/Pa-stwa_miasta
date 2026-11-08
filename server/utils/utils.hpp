@@ -6,6 +6,6 @@
 char generateRandomChar();
 
 void display_answers(std::vector<std::vector<std::string>> &messages);
-std::string capitalize(std::string str);
 
 std::string capitalize(std::string str);
+
