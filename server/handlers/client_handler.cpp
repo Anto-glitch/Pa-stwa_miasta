@@ -48,7 +48,7 @@ void handleClient(int clientId, vector<vector<string>> &messages,
     close_socket(clientId);
     return;
   }
-
+  
   if (nickname.empty()) {
     nickname = "Gracz_" + to_string(clientId);
   }
@@ -86,7 +86,7 @@ void handleClient(int clientId, vector<vector<string>> &messages,
   }
 
   // Poinformuj klienta, ze to koniec kategorii
-  write_to_socket(clientId, "KONIEC\n");
+  write_to_socket(clientId, "EXIT\n");
 
   if (!answers.empty()) {
     lock_guard<mutex> lock(message_mutex);
