@@ -4,12 +4,29 @@
 #include <mutex>
 #include <string>
 #include <vector>
+#include <algorithm>
+#include <condition_variable>
+#include <thread>
+#include <poll.h>
 
 #include "../systems/server_connection.hpp"
 #include "../systems/socket_message.hpp"
 #include "../utils/utils.hpp"
 
 using namespace std;
+
+struct Player 
+{
+  int socket_id;
+  string nickname;
+  bool ready;
+};
+struct Gamestate{
+  condition_variable cv;
+  bool gameStarted;
+  mutex m;
+  vector<Player> players;
+};
 
 bool readLineFromSocket(int clientId, string &accumulated_text,
                         string &out_line) {
@@ -34,7 +51,7 @@ bool readLineFromSocket(int clientId, string &accumulated_text,
 }
 
 void handleClient(int clientId, vector<vector<string>> &messages,
-                  mutex &message_mutex, char random_letter,
+                  mutex &message_mutex, Gamestate &gameState, char random_letter,
                   vector<string> categories) {
   //Wyslanie wylosowanej litery do klienta zaraz po polaczeniu
   write_to_socket(clientId, string(1, random_letter));
@@ -48,13 +65,65 @@ void handleClient(int clientId, vector<vector<string>> &messages,
     close_socket(clientId);
     return;
   }
-  
+
   if (nickname.empty()) {
     nickname = "Gracz_" + to_string(clientId);
   }
 
   cout << "Nowy gracz dolaczyl: " << nickname << " (ID: " << clientId << ")"
        << endl;
+
+       //waiting for all players to be ready
+  string ready = "";
+   if(readLineFromSocket(clientId, accumulated_text, ready)) {
+    if (ready == "READY") {
+      {
+        unique_lock<mutex> lock(gameState.m);
+        gameState.players.push_back({clientId, nickname, true}); 
+      }
+    }
+  }
+
+  pollfd pfds[1];
+  pfds[0].fd = clientId;
+  pfds[0].events = POLLIN;
+
+  while(!gameState.gameStarted) {
+    
+    {
+      lock_guard<mutex> lock(gameState.m);
+      if(gameState.gameStarted) {
+        break;
+      }
+    }
+    
+    int ret = poll(pfds, 1, 100); // timeout
+
+    if(pfds[0].revents & POLLIN) {
+      if (ready == "EXIT" || !readLineFromSocket(clientId, accumulated_text, ready)) { 
+        for (auto &player : gameState.players) {
+          if (player.socket_id == clientId) {
+            unique_lock<mutex> lock(gameState.m);
+            gameState.players.erase(std::remove(gameState.players.begin(), gameState.players.end(), player), gameState.players.end());
+            close_socket(clientId);
+            return;
+         }
+        }
+      }
+    }
+    if( pfds[0].revents & (POLLHUP | POLLERR))
+    {
+      for (auto &player : gameState.players) {
+          if (player.socket_id == clientId) {
+            unique_lock<mutex> lock(gameState.m);
+            gameState.players.erase(std::remove(gameState.players.begin(), gameState.players.end(), player), gameState.players.end());
+            close_socket(clientId);
+            return;
+         }
+        }
+    }
+
+  }
 
   vector<string> answers;
   int turns = 0;
