@@ -68,7 +68,7 @@ int main()
 
     //create texts
     map<string, sf::Text> texts;
-    texts.insert({"Nickname", createText(" ", font, 24, sf::Color::White, {280.f, 440.f})});
+    texts.insert({"Nickname", createText(" ", font, 50, sf::Color::White, {280.f, 440.f})});
 
     //create socket
     int socket_id = create_socket();
@@ -87,10 +87,8 @@ int main()
     if (!textCursor) {
         std::cerr << "Failed to load text cursor." << std::endl;
     }    
-    if (!arrowCursor || !handCursor || !textCursor) {
-        disconnect_connection(socket_id);
-        return 1;
-    }
+        window.setMouseCursorVisible(true);
+        window.setMouseCursor(*arrowCursor);
 
     CursorType currentCursor = CursorType::Arrow;
     GameState currentState = GameState::START_SCREEN;

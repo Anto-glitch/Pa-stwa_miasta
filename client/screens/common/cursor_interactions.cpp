@@ -1,6 +1,9 @@
 
 #include "cursor.hpp"
 
+#include <SFML/Window.hpp>
+#include <vector>
+
 void handleCursorInteractions(
     sf::RenderWindow& window,
     const std::vector<sf::Sprite>& buttons,
