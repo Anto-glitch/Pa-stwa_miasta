@@ -218,7 +218,7 @@ int main()
 
         handleCursorInteractions(
             window,
-            modules,
+             vector<sf::Sprite>(modules.begin(), modules.end() - 1), //placeholder na text nie powinien być traktowany jak button
             nicknameTextBox,
             *arrowCursor,
             *handCursor,
