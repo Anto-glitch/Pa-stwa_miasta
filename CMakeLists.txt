@@ -1,11 +1,17 @@
-cmake_minimum_required(VERSION 4.0)
-project(Panstwa_Miasta)
+cmake_minimum_required(VERSION 3.16)
+project(Panstwa_Miasta LANGUAGES CXX)
 
 add_executable(client
     client/client.cpp
-    client/screens/image_sprite.cpp
+    client/screens/generate_sprite.cpp
+    client/screens/common/exit_button.cpp
+    client/screens/common/cursor_interactions.cpp
     client/systems/socket_connection.cpp
     client/systems/socket_message.cpp
+    client/utils/utils.cpp
+    client/screens/common/create_text.cpp
+    client/screens/common/textbox.h
+
 )
 
 add_executable(server
@@ -27,3 +33,6 @@ target_link_libraries(client PRIVATE
 target_link_libraries(server PRIVATE
     SFML::System
 )
+
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")

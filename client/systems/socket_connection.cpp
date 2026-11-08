@@ -31,7 +31,12 @@ bool create_connection(int socket_id, int port_number, const char* server_addres
     return true;
 }
 
-void close_connection(int socket) {
+void disconnect_connection(int& socket) {
+    if (socket == -1) {
+        return;
+    }
+
     shutdown(socket, SHUT_RDWR);
     close(socket);
+    socket = -1;
 }

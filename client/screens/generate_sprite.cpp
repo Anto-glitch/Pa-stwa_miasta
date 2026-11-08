@@ -1,9 +1,10 @@
-#include "image_sprite.hpp"
+#include "generate_sprite.hpp"
 
-#include <memory>
-#include <vector>
-#include <string>
 #include <iostream>
+#include <memory>
+#include <optional>
+#include <string>
+#include <vector>
 
 std::optional<sf::Sprite> generateImageSprite(
     sf::Texture& texture,
@@ -61,12 +62,31 @@ bool generateModuleSpritesFromFiles(
     textures.clear();
     sprites.clear();
         std::unique_ptr<sf::Texture> texture = std::make_unique<sf::Texture>();
-        auto spriteOpt = generateImageSprite(*texture, "../assets/button.png", {300.f, 495.f}, {180.f, 80.f});
+        auto spriteOpt = generateImageSprite(*texture, "../assets/graphics/button.png", {300.f, 495.f}, {180.f, 80.f});
         if(!spriteOpt) {
             std::cerr << "Failed to generate sprite from texture\n";
             return false;
         }
         textures.push_back(std::move(texture));
         sprites.push_back(std::move(spriteOpt.value()));
+
+        texture = std::make_unique<sf::Texture>();
+        spriteOpt = generateImageSprite(*texture, "../assets/graphics/exitbutton.png", {660.f, 10.f}, {130.f, 65.f});
+        if(!spriteOpt) {
+            std::cerr << "Failed to generate sprite from texture\n";
+            return false;
+        }
+        textures.push_back(std::move(texture));
+        sprites.push_back(std::move(spriteOpt.value()));
+
+        texture = std::make_unique<sf::Texture>();
+        spriteOpt = generateImageSprite(*texture, "../assets/graphics/textplaceholder.png", {280.f, 460.f}, {220.f, 5.f});
+        if(!spriteOpt) {
+            std::cerr << "Failed to generate sprite from texture\n";
+            return false;
+        }
+        textures.push_back(std::move(texture));
+        sprites.push_back(std::move(spriteOpt.value()));
+
     return true;
 }
