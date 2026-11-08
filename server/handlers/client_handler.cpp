@@ -36,17 +36,19 @@ bool readLineFromSocket(int clientId, string &accumulated_text,
 void handleClient(int clientId, vector<vector<string>> &messages,
                   mutex &message_mutex, char random_letter,
                   vector<string> categories) {
-  // 1. Wyslanie wylosowanej litery do klienta zaraz po polaczeniu
+  //Wyslanie wylosowanej litery do klienta zaraz po polaczeniu
   write_to_socket(clientId, string(1, random_letter));
 
-  // 2. Odbior nicku od klienta
+  // Odbior nicku od klienta
   string accumulated_text = "";
   string nickname = "";
 
+  // Klient sie rozlaczyl
   if (!readLineFromSocket(clientId, accumulated_text, nickname)) {
     close_socket(clientId);
     return;
   }
+
   if (nickname.empty()) {
     nickname = "Gracz_" + to_string(clientId);
   }
@@ -67,7 +69,7 @@ void handleClient(int clientId, vector<vector<string>> &messages,
       break; // Klient sie rozlaczyl
     }
 
-    if (line == "close") {
+    if (line == "exit") {
       break;
     }
 
