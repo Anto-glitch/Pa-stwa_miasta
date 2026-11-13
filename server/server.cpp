@@ -17,22 +17,9 @@
 #include <unistd.h>
 #include <vector>
 #include <condition_variable>
+#include <algorithm>
 
 using namespace std;
-
-struct Player 
-{
-  int socket_id;
-  string nickname;
-  bool ready;
-};
-
-struct Gamestate{
-  condition_variable cv;
-  bool gameStarted;
-  mutex m;
-  vector<Player> players;
-};
 
 int main(void) {
 
@@ -62,14 +49,14 @@ int main(void) {
       continue;
     }
     clientIds.push_back(clientId);
-    thread t1(handleClient, clientId, ref(messages), ref(message_mutex), ref(players), ref(players_mutex), ref(gameState), random_letter,
-          ref(gameState),random_letter, ref(categories));
+    thread t1(handleClient, clientId, ref(messages), ref(message_mutex),
+              ref(gameState), random_letter, categories);
     t1.detach();
 
     lock_guard<mutex> lock(gameState.m);
-    if(gameState.players.size() >= 2) {
+    int readyPlayers = count_if(gameState.players.begin(),gameState.players.end(),[](Player &p){return p.ready;});
+    if(gameState.players.size()>=2 && readyPlayers == gameState.players.size()){ 
       gameState.gameStarted = true;
-      gameState.cv.notify_all();
     }
   }
   close_socket(serverId);
