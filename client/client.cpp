@@ -76,9 +76,7 @@ int main() {
   texts.insert({"Prompt", createText("", font, 24, FONTCOLOR, {30.f, 200.f})});
 
   // create socket & NetworkClient
-  int socket_id = create_socket();
-  if (socket_id == -1)
-    return 1;
+  int socket_id = -1;
 
   NetworkClient netClient; // Utworzenie obiektu naszego klienta
 
