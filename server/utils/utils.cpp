@@ -7,6 +7,8 @@
 #include <cstddef>
 #include <cctype>
 #include <algorithm>
+#include <thread>
+#include <chrono>
 
 using namespace std;
 
@@ -44,9 +46,9 @@ void display_answers(vector<vector<string>> &messages) {
         cout << endl;
     }
 }
-
+// to be fixed
 int counting_down(int seconds) {
     for (int i = seconds; i>0;i--){
-        chrono::seconds sleep_time(1);
+        std::this_thread::sleep_for(std::chrono::seconds(1));
                 return i;
     }

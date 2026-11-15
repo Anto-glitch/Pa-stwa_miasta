@@ -18,6 +18,7 @@
 #include <vector>
 #include <condition_variable>
 #include <algorithm>
+#include <poll.h>
 
 using namespace std;
 
@@ -43,7 +44,19 @@ int main(void) {
 
   vector<int> clientIds;
 
+  pollfd pfds[1];
+  pfds[0].fd = serverId;
+  pfds[0].events = POLLIN;
+
   while (true) {
+
+    int poll_result = poll(pfds, 1, 100);
+    if(poll_result < 0) {    //if poll fails
+      perror("Poll failed");
+      break;
+    }
+    else if(poll_result == 1) { //if there is a new connection
+      
     int clientId = accept_client(serverId);
     if (clientId == -1) {
       continue;
@@ -52,12 +65,17 @@ int main(void) {
     thread t1(handleClient, clientId, ref(messages), ref(message_mutex),
               ref(gameState), random_letter, categories);
     t1.detach();
-
+    }  
     lock_guard<mutex> lock(gameState.m);
-    int readyPlayers = count_if(gameState.players.begin(),gameState.players.end(),[](Player &p){return p.ready;});
-    if(gameState.players.size()>=2 && readyPlayers == gameState.players.size()){ 
-      gameState.gameStarted = true;
+    if (!gameState.gameStarted) {
+      int readyPlayers = count_if(gameState.players.begin(),gameState.players.end(),[](Player &p){return p.ready;});
+      if(gameState.players.size()>=2 && readyPlayers == gameState.players.size()){ 
+        gameState.gameStarted = true;
+      }
+      continue;
     }
+
+    
   }
   close_socket(serverId);
 
