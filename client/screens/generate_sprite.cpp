@@ -80,13 +80,14 @@ bool generateModuleSpritesFromFiles(
         sprites.push_back(std::move(spriteOpt.value()));
 
         texture = std::make_unique<sf::Texture>();
-        spriteOpt = generateImageSprite(*texture, "../assets/graphics/textplaceholder.png", {280.f, 460.f}, {220.f, 5.f});
+        spriteOpt = generateImageSprite(*texture, "../assets/graphics/textplaceholder.png", {280.f, 470.f}, {220.f, 5.f});
         if(!spriteOpt) {
             std::cerr << "Failed to generate sprite from texture\n";
             return false;
         }
         textures.push_back(std::move(texture));
         sprites.push_back(std::move(spriteOpt.value()));
+        
 
     return true;
 }
