@@ -44,11 +44,15 @@ int main() {
     return 1;
   }
 
-  // textures for modules
+  // textures for modules (buttons)
   vector<std::unique_ptr<sf::Texture>> moduleTextures;
   vector<sf::Sprite> modules;
+  const vector<Module> moduleFiles = {
+      {"../assets/graphics/button.png", {300.f, 495.f}, {180.f, 80.f}},
+      {"../assets/graphics/exitbutton.png", {660.f, 10.f}, {130.f, 65.f}},
+  };
 
-  if (!generateModuleSpritesFromFiles(moduleTextures, modules)) {
+  if (!generateModuleSpritesFromFiles(moduleFiles, moduleTextures, modules)) {
     std::cerr << "Failed to load interface modules." << std::endl;
     return 1;
   }
@@ -220,18 +224,17 @@ int main() {
       }
     }
 
-    // Na start screenie: przycisk Connect + exit (bez placeholdera)
+    // Na start screenie: wszystkie przyciski (Connect + Exit)
     // Na pozostalych ekranach: tylko exit button (modules[1])
-    vector<sf::Sprite> activeButtons;
-    if (currentState == GameState::START_SCREEN) {
-      activeButtons = vector<sf::Sprite>(
-          modules.begin(),
-          modules.end() - 1); // connect + exit, bez placeholdera
-    } else {
-      activeButtons = {modules[1]}; // tylko exit button
-    }
+    vector<sf::Sprite> activeButtons =
+        (currentState == GameState::START_SCREEN)
+            ? modules
+            : vector<sf::Sprite>{modules[1]};
 
-    handleCursorInteractions(window, activeButtons, nicknameTextBox,
+    TextBox &activeTextBox =
+        (currentState == GameState::GAME) ? answerTextBox : nicknameTextBox;
+
+    handleCursorInteractions(window, activeButtons, activeTextBox,
                              *arrowCursor, *handCursor, *textCursor,
                              currentCursor);
 
@@ -241,7 +244,6 @@ int main() {
     case GameState::START_SCREEN:
       window.draw(screens[0]);
       window.draw(modules[0]);
-      window.draw(modules[2]);
       nicknameTextBox.draw(window);
       break;
     case GameState::WAITING_ROOM:
@@ -256,7 +258,6 @@ int main() {
         window.draw(texts.at("LetterAnnouncement"));
         window.draw(texts.at("Letter"));
       }
-      window.draw(modules[2]);
       window.draw(texts.at("Prompt"));
       answerTextBox.draw(window);
       break;

@@ -56,38 +56,25 @@ bool generateScreenSpritesFromFiles(
 }
 
 bool generateModuleSpritesFromFiles(
+    const std::vector<Module>& moduleConfigs,
     std::vector<std::unique_ptr<sf::Texture>>& textures,
     std::vector<sf::Sprite>& sprites)
 {
     textures.clear();
     sprites.clear();
+    textures.reserve(moduleConfigs.size());
+    sprites.reserve(moduleConfigs.size());
+
+    for (const auto& mod : moduleConfigs) {
         std::unique_ptr<sf::Texture> texture = std::make_unique<sf::Texture>();
-        auto spriteOpt = generateImageSprite(*texture, "../assets/graphics/button.png", {300.f, 495.f}, {180.f, 80.f});
-        if(!spriteOpt) {
-            std::cerr << "Failed to generate sprite from texture\n";
+        auto spriteOpt = generateImageSprite(*texture, mod.filename, mod.position, mod.size);
+        if (!spriteOpt) {
+            std::cerr << "Failed to generate sprite from file: " << mod.filename << '\n';
             return false;
         }
         textures.push_back(std::move(texture));
         sprites.push_back(std::move(spriteOpt.value()));
-
-        texture = std::make_unique<sf::Texture>();
-        spriteOpt = generateImageSprite(*texture, "../assets/graphics/exitbutton.png", {660.f, 10.f}, {130.f, 65.f});
-        if(!spriteOpt) {
-            std::cerr << "Failed to generate sprite from texture\n";
-            return false;
-        }
-        textures.push_back(std::move(texture));
-        sprites.push_back(std::move(spriteOpt.value()));
-
-        texture = std::make_unique<sf::Texture>();
-        spriteOpt = generateImageSprite(*texture, "../assets/graphics/textplaceholder.png", {280.f, 470.f}, {220.f, 5.f});
-        if(!spriteOpt) {
-            std::cerr << "Failed to generate sprite from texture\n";
-            return false;
-        }
-        textures.push_back(std::move(texture));
-        sprites.push_back(std::move(spriteOpt.value()));
-        
+    }
 
     return true;
 }
