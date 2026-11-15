@@ -20,6 +20,10 @@ add_executable(server
     server/systems/socket_message.cpp
     server/utils/utils.cpp
     server/handlers/client_handler.cpp
+    server/handlers/io/read_line.cpp
+    server/handlers/players/player_registry.cpp
+    server/handlers/waiting_room/waiting_room.cpp
+    server/handlers/answers/answer_handler.cpp
 )
 
 find_package(SFML 3.0 COMPONENTS Graphics Window System REQUIRED)
