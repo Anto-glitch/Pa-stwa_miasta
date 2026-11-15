@@ -60,7 +60,7 @@ bool registerPlayer(int clientId, string &nickname, Gamestate &gameState) {
       });
 
   if (existingPlayer != gameState.players.end()) {
-    write_to_socket(clientId, "NICK_TAKI_SAM\n");
+    write_to_socket(clientId, "BAD_NICKNAME\n");
     return false;
   }
 
@@ -119,7 +119,7 @@ bool waitForGameStart(int clientId, string &accumulated_text,
       return false;
     }
 
-    if (poll_descriptor.revents & (POLLHUP | POLLERR)) {
+    if (poll_descriptor.revents & (POLLHUP | POLLERR | POLLNVAL)) {
       return false;
     }
     if (poll_descriptor.revents & POLLIN) {
@@ -202,7 +202,6 @@ void handleClient(int clientId, vector<vector<string>> &messages,
     if (registerPlayer(clientId, nickname, gameState)) {
       break;
     }
-    write_to_socket(clientId, "BAD_USERNAME:\n");
   }
 
   if (!waitForGameStart(clientId, accumulated_text, gameState)) {
@@ -214,5 +213,6 @@ void handleClient(int clientId, vector<vector<string>> &messages,
   vector<string> answers =
       collectAnswers(clientId, accumulated_text, random_letter, categories);
   saveAnswers(move(answers), nickname, messages, message_mutex);
+  removePlayer(clientId, gameState);
   close_socket(clientId);
 }
