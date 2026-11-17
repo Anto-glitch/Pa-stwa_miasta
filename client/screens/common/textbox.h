@@ -1,7 +1,11 @@
 #pragma once
 
+#include "../generate_sprite.hpp"
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include <memory>
+#include <optional>
 #include <sstream>
 #include <string>
 
@@ -16,6 +20,8 @@ private:
   sf::Text text;
   sf::Vector2f boxPosition;
   sf::Vector2f boxSize;
+  std::unique_ptr<sf::Texture> placeholderTexture;
+  std::optional<sf::Sprite> placeholderSprite;
   bool isActive = false;
   int CharacterLimit = 20;
   ostringstream response;
@@ -52,9 +58,15 @@ public:
   TextBox(const sf::Font &font, unsigned int characterSize,
           const sf::Color &color, const sf::Vector2f &position,
           const sf::Vector2f &size = {220.f, 35.f})
-      : text(font, "", characterSize), boxPosition(position), boxSize(size) {
+      : text(font, "", characterSize),
+        boxPosition(position),
+        boxSize(size),
+        placeholderTexture(std::make_unique<sf::Texture>()) {
     text.setFillColor(color);
     text.setPosition(position);
+    placeholderSprite = generateImageSprite(
+        *placeholderTexture, "../assets/graphics/textplaceholder.png",
+        {position.x, position.y + size.y + 10.f}, {size.x, 5.f});
   }
 
   void clear() {
@@ -80,7 +92,12 @@ public:
     }
   }
 
-  void draw(sf::RenderWindow &window) { window.draw(text); }
+  void draw(sf::RenderWindow &window) {
+    if (placeholderSprite) {
+      window.draw(*placeholderSprite);
+    }
+    window.draw(text);
+  }
 
   void typedOn(const sf::Event::TextEntered &textEvent) {
     if (isActive) {
