@@ -102,7 +102,12 @@ int main() {
 
       if (serverMsg == "EXIT") {
         currentState = GameState::RESULTS;
+      } else if(serverMsg == "START") {
+        currentState = GameState::GAME;
+        answerTextBox.setActive(true);
+
       } else {
+        // Nie wiem czy to potrzebne na tą chwilę ale zostawie do przemyslenia
         texts.at("Prompt").setString(serverMsg);
         currentState = GameState::GAME;
         answerTextBox.setActive(true);
@@ -181,6 +186,17 @@ int main() {
         break;
 
       case GameState::WAITING_ROOM:
+        if (const auto *mouseEvent = event ->getIf<sf::Event::MouseButtonPressed>()){
+          if(mouseEvent->button ==sf::Mouse::Button::Left){
+              sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+              sf::Vector2f mousePosF(mousePos);
+              if(modules[0].getGlobalBounds().contains(mousePosF)){
+                write_to_socket(socket_id, "READY\n");  
+                
+              }
+          }
+        }
+        if(R)
         break;
 
       case GameState::GAME:
@@ -245,10 +261,8 @@ int main() {
       nicknameTextBox.draw(window);
       break;
     case GameState::WAITING_ROOM:
-      window.draw(screens[1]);
-      if (gameLetter != '\0') {
-        window.draw(texts.at("Letter"));
-      }
+      window.draw(screens[0]);
+      window.draw(modules[0]);
       break;
     case GameState::GAME:
       window.draw(screens[1]);

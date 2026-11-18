@@ -36,7 +36,7 @@ void handleClient(int clientId, vector<vector<string>> &messages,
     close_socket(clientId);
     return;
   }
-
+  write_to_socket(clientId, "START\n");
   vector<string> answers =
       collectAnswers(clientId, accumulated_text, random_letter, categories);
   saveAnswers(move(answers), nickname, messages, message_mutex);

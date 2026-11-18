@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <vector>
 
-ssize_t read_from_socket(int socket, char* message, std::size_t message_max_size, int flags) {
+ssize_t read_from_socket(int socket, char* message, std::size_t message_max_size, int flags=0) {
     
     if (flags== 0) {
         flags = 0;
@@ -28,7 +28,7 @@ ssize_t read_from_socket(int socket, char* message, std::size_t message_max_size
     return bytes_read;
 }
 
-ssize_t write_to_socket(int socket, const std::string& message, int flags) {
+ssize_t write_to_socket(int socket, const std::string& message, int flags=0) {
     if (flags == 0) {
         flags = 0;
     } else if (flags == 1) {

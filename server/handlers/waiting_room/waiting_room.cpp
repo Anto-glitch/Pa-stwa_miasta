@@ -6,7 +6,7 @@
 
 #include "../io/read_line.hpp"
 
-namespace {
+namespace { //sprawdzić czemu xdd
 
 bool markPlayerReady(int clientId, Gamestate &gameState) {
   std::lock_guard<std::mutex> lock(gameState.m);
