@@ -2,6 +2,7 @@
 #include "screens/common/exit_button.hpp"
 #include "screens/common/text.hpp"
 #include "screens/common/textbox.h"
+#include "screens/common/user_label.hpp"
 #include "screens/generate_sprite.hpp"
 #include "systems/network_client.hpp"
 #include "systems/socket_connection.hpp"
@@ -35,8 +36,10 @@ int main() {
   // textures for screens
   vector<std::unique_ptr<sf::Texture>> textures;
   vector<sf::Sprite> screens;
-  const vector<string> screenFiles = {"../assets/graphics/startScreen.png",
-                                      "../assets/graphics/gameScreen.png"};
+  const vector<string> screenFiles = {
+      "../assets/graphics/startScreen.png",
+      "../assets/graphics/waitingroomScreen.png",
+      "../assets/graphics/gameScreen.png"};
 
   if (!generateScreenSpritesFromFiles(screenFiles, textures, screens,
                                       {0.f, 0.f}, {800.f, 600.f})) {
@@ -63,6 +66,15 @@ int main() {
   // set textboxes
   TextBox nicknameTextBox(font, 36, FONTCOLOR, {280.f, 425.f}, {220.f, 35.f});
   TextBox answerTextBox(font, 36, FONTCOLOR, {280.f, 425.f}, {250.f, 35.f});
+  TextBox inactiveTextBox(
+      font, 1, FONTCOLOR, {-1000.f, -1000.f},
+      {0.f, 0.f}); // TODO: Czystsze zapisanie tego kodu, prawdopodobnie wymaga
+                   // edycji handleCursorInteractions()
+
+  // lista etykiet graczy w poczekalni
+  vector<UserLabel> playerLabels; //// TODO jak dodać nowy nickname:
+                                  ///playerLabels.emplace_back(nick, font,
+                                  ///sf::Vector2f{250.f, 220.f + i * 85.f});
 
   // create texts
   char gameLetter = '\0';
@@ -77,8 +89,7 @@ int main() {
 
   // create socket & NetworkClient
   int socket_id = -1;
-
-  NetworkClient netClient; // Utworzenie obiektu naszego klienta
+  NetworkClient netClient;
 
   // create cursors
   auto arrowCursor = sf::Cursor::createFromSystem(sf::Cursor::Type::Arrow);
@@ -109,8 +120,11 @@ int main() {
       } else {
         // Nie wiem czy to potrzebne na tą chwilę ale zostawie do przemyslenia
         texts.at("Prompt").setString(serverMsg);
-        currentState = GameState::GAME;
-        answerTextBox.setActive(true);
+        // Jezeli jestesmy w WAITING_ROOM, zapisujemy pytanie w tle,
+        // ale czekamy na klikniecie przycisku przed przejsciem do GAME
+        if (currentState == GameState::GAME) {
+          answerTextBox.setActive(true);
+        }
       }
     }
 
@@ -129,6 +143,7 @@ int main() {
                                currentState == GameState::START_SCREEN)) {
             if (currentState != GameState::START_SCREEN) {
               currentState = GameState::START_SCREEN;
+              playerLabels.clear();
             }
           }
         }
@@ -149,10 +164,24 @@ int main() {
               if (!create_connection(socket_id, 3333, "127.0.0.1")) {
                 std::cerr << "Failed to connect to server." << std::endl;
                 disconnect_connection(socket_id);
+                socket_id = -1;
                 break;
               } else {
                 std::cout << "Polaczono z serwerem!" << std::endl;
+
+                string playerNick = nicknameTextBox.getText();
+                if (playerNick.empty()) {
+                  playerNick = "Gracz";
+                }
+
+                // Utworzenie UserLabel dla gracza w poczekalni
+                playerLabels.clear();
+                playerLabels.emplace_back(playerNick, font,
+                                          sf::Vector2f{250.f, 270.f},
+                                          sf::Vector2f{300.f, 80.f});
+
                 currentState = GameState::WAITING_ROOM;
+                nicknameTextBox.setActive(false);
 
                 // Odbior wylosowanej litery (serwer wysyla 1 znak bez \n)
                 char received_letter = '\0';
@@ -165,11 +194,6 @@ int main() {
 
                 // Uruchomienie watku nasluchujacego i wyslanie nicku
                 netClient.startListening(socket_id);
-
-                string playerNick = nicknameTextBox.getText();
-                if (playerNick.empty()) {
-                  playerNick = "Gracz";
-                }
                 netClient.sendLine(playerNick);
               }
             }
@@ -186,6 +210,8 @@ int main() {
         break;
 
       case GameState::WAITING_ROOM:
+
+      //TODO solve this problem
         if (const auto *mouseEvent = event ->getIf<sf::Event::MouseButtonPressed>()){
           if(mouseEvent->button ==sf::Mouse::Button::Left){
               sf::Vector2i mousePos = sf::Mouse::getPosition(window);
@@ -197,6 +223,19 @@ int main() {
           }
         }
         if(R)
+        if (const auto *mouseEvent =
+                event->getIf<sf::Event::MouseButtonPressed>()) {
+          if (mouseEvent->button == sf::Mouse::Button::Left) {
+            sf::Vector2i mousePos = sf::Mouse::getPosition(window);
+            sf::Vector2f mousePosF(mousePos);
+
+            // Klikniecie przycisku w poczekalni przechodzi do wlasciwej gry
+            if (modules[0].getGlobalBounds().contains(mousePosF)) {
+              currentState = GameState::GAME;
+              answerTextBox.setActive(true);
+            }
+          }
+        }
         break;
 
       case GameState::GAME:
@@ -221,7 +260,6 @@ int main() {
           if (keyEvent->code == sf::Keyboard::Key::Enter) {
             string answer = answerTextBox.getText();
             if (!answer.empty()) {
-              // Odpowiedz serwera odbierze pollMessage na gorze petli
               netClient.sendLine(answer);
               answerTextBox.clear();
               answerTextBox.setActive(true);
@@ -238,19 +276,25 @@ int main() {
       }
     }
 
-    // Na start screenie: wszystkie przyciski (Connect + Exit)
-    // Na pozostalych ekranach: tylko exit button (modules[1])
+    // Na START_SCREEN oraz WAITING_ROOM aktywne sa oba przyciski (modules[0] +
+    // exit)
     vector<sf::Sprite> activeButtons =
-        (currentState == GameState::START_SCREEN)
+        (currentState == GameState::START_SCREEN ||
+         currentState == GameState::WAITING_ROOM)
             ? modules
             : vector<sf::Sprite>{modules[1]};
 
     TextBox &activeTextBox =
-        (currentState == GameState::GAME) ? answerTextBox : nicknameTextBox;
+        (currentState == GameState::START_SCREEN)
+            ? nicknameTextBox
+            : ((currentState == GameState::GAME)
+                   ? answerTextBox // TODO: Czystsze zapisanie tego kodu,
+                                   // prawdopodobnie wymaga edycji
+                                   // handleCursorInteractions()
+                   : inactiveTextBox);
 
-    handleCursorInteractions(window, activeButtons, activeTextBox,
-                             *arrowCursor, *handCursor, *textCursor,
-                             currentCursor);
+    handleCursorInteractions(window, activeButtons, activeTextBox, *arrowCursor,
+                             *handCursor, *textCursor, currentCursor);
 
     window.clear(sf::Color::Black);
 
@@ -261,11 +305,14 @@ int main() {
       nicknameTextBox.draw(window);
       break;
     case GameState::WAITING_ROOM:
-      window.draw(screens[0]);
+      window.draw(screens[1]);
+      for (const auto &label : playerLabels) {
+        label.draw(window);
+      }
       window.draw(modules[0]);
       break;
     case GameState::GAME:
-      window.draw(screens[1]);
+      window.draw(screens[2]);
       if (gameLetter != '\0') {
         window.draw(texts.at("LetterAnnouncement"));
         window.draw(texts.at("Letter"));
@@ -276,7 +323,7 @@ int main() {
     case GameState::ELECTION:
       break;
     case GameState::RESULTS:
-      window.draw(screens[1]);
+      window.draw(screens[2]);
       break;
     }
 
