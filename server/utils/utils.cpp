@@ -46,9 +46,10 @@ void display_answers(vector<vector<string>> &messages) {
         cout << endl;
     }
 }
+
 int counting_down(int seconds) {
     for (int i = seconds; i>0;i--){
         std::this_thread::sleep_for(std::chrono::seconds(1));
-                return i;
     }
+    return 0;
 }

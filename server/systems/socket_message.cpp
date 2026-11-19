@@ -5,18 +5,12 @@
 #include <unistd.h>
 #include <vector>
 
-ssize_t read_from_socket(int socket, char* message, std::size_t message_max_size, int flags=0) {
+ssize_t read_from_socket(int socket, char* message, std::size_t message_max_size, int flags) {
     
-    if (flags== 0) {
-        flags = 0;
-    }
-    else if(flags == 1){flags = MSG_DONTWAIT;}
+    if(flags == 1){flags = MSG_DONTWAIT;}
     else if(flags == 2){flags = MSG_PEEK;}
     else if(flags == 3){flags = MSG_WAITALL;}
-    else{
-        flags = 0;
-    }
-     
+    else {flags = 0;}
     const ssize_t bytes_read = recv(socket, message, message_max_size, flags);
     if (bytes_read == -1) {
         perror("Read failed");
@@ -28,10 +22,8 @@ ssize_t read_from_socket(int socket, char* message, std::size_t message_max_size
     return bytes_read;
 }
 
-ssize_t write_to_socket(int socket, const std::string& message, int flags=0) {
-    if (flags == 0) {
-        flags = 0;
-    } else if (flags == 1) {
+ssize_t write_to_socket(int socket, const std::string& message, int flags) {
+    if (flags == 1) {
         flags = MSG_DONTWAIT;
     } else if (flags == 2) {
         flags = MSG_PEEK;

@@ -24,6 +24,7 @@ int main() {
   enum GameState {
     START_SCREEN,
     WAITING_ROOM,
+    WAITING_ROOM_READY,
     GAME,
     ELECTION,
     RESULTS,
@@ -104,10 +105,11 @@ int main() {
   CursorType currentCursor = CursorType::Arrow;
   GameState currentState = GameState::START_SCREEN;
 
+  string serverMsg="";
   while (window.isOpen()) {
 
     // Sprawdzanie skrzynki pocztowej co klatke
-    string serverMsg;
+  
     while (netClient.pollMessage(serverMsg)) {
       std::cout << "Odebrano z serwera: " << serverMsg << std::endl;
 
@@ -211,18 +213,6 @@ int main() {
 
       case GameState::WAITING_ROOM:
 
-      //TODO solve this problem
-        if (const auto *mouseEvent = event ->getIf<sf::Event::MouseButtonPressed>()){
-          if(mouseEvent->button ==sf::Mouse::Button::Left){
-              sf::Vector2i mousePos = sf::Mouse::getPosition(window);
-              sf::Vector2f mousePosF(mousePos);
-              if(modules[0].getGlobalBounds().contains(mousePosF)){
-                write_to_socket(socket_id, "READY\n");  
-                
-              }
-          }
-        }
-        if(R)
         if (const auto *mouseEvent =
                 event->getIf<sf::Event::MouseButtonPressed>()) {
           if (mouseEvent->button == sf::Mouse::Button::Left) {
@@ -231,11 +221,14 @@ int main() {
 
             // Klikniecie przycisku w poczekalni przechodzi do wlasciwej gry
             if (modules[0].getGlobalBounds().contains(mousePosF)) {
-              currentState = GameState::GAME;
+              currentState = GameState::WAITING_ROOM_READY;
               answerTextBox.setActive(true);
+              netClient.sendLine("READY");
             }
           }
         }
+        break;
+        case GameState::WAITING_ROOM_READY:
         break;
 
       case GameState::GAME:
@@ -310,6 +303,12 @@ int main() {
         label.draw(window);
       }
       window.draw(modules[0]);
+      break;
+    case GameState::WAITING_ROOM_READY:
+      window.draw(screens[1]);
+      for (const auto &label : playerLabels) {
+        label.draw(window);
+      }
       break;
     case GameState::GAME:
       window.draw(screens[2]);
