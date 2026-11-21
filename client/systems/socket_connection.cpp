@@ -1,4 +1,5 @@
 #include "socket_connection.hpp"
+#include "socket_message.hpp"
 
 #include <arpa/inet.h>
 #include <cstdio>
@@ -32,6 +33,7 @@ bool create_connection(int socket_id, int port_number, const char* server_addres
 }
 
 void disconnect_connection(int& socket) {
+    write_to_socket(socket, "EXIT\n");
     if (socket == -1) {
         return;
     }

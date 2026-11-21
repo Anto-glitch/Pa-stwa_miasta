@@ -24,6 +24,7 @@ int main() {
   enum GameState {
     START_SCREEN,
     WAITING_ROOM,
+    WAITING_ROOM_READY,
     GAME,
     ELECTION,
     RESULTS,
@@ -104,16 +105,27 @@ int main() {
   CursorType currentCursor = CursorType::Arrow;
   GameState currentState = GameState::START_SCREEN;
 
+  string serverMsg="";
   while (window.isOpen()) {
 
     // Sprawdzanie skrzynki pocztowej co klatke
-    string serverMsg;
+  
     while (netClient.pollMessage(serverMsg)) {
       std::cout << "Odebrano z serwera: " << serverMsg << std::endl;
 
       if (serverMsg == "EXIT") {
         currentState = GameState::RESULTS;
+      } else if(serverMsg == "START") {
+        currentState = GameState::GAME;
+        answerTextBox.setActive(true);
+
+      } else if (serverMsg.rfind("LETTER ", 0) == 0 &&
+                 serverMsg.size() == 8) {
+        gameLetter = serverMsg.back();
+        texts.at("Letter").setString(string(1, gameLetter));
+
       } else {
+        // Nie wiem czy to potrzebne na tą chwilę ale zostawie do przemyslenia
         texts.at("Prompt").setString(serverMsg);
         // Jezeli jestesmy w WAITING_ROOM, zapisujemy pytanie w tle,
         // ale czekamy na klikniecie przycisku przed przejsciem do GAME
@@ -164,6 +176,26 @@ int main() {
               } else {
                 std::cout << "Polaczono z serwerem!" << std::endl;
 
+                constexpr char expectedCheck[] = "CHECK\n";
+                constexpr size_t expectedCheckSize = sizeof(expectedCheck) - 1;
+                char checkBuffer[expectedCheckSize];
+                size_t checkBytes = 0;
+                while (checkBytes < expectedCheckSize) {
+                  const ssize_t bytesRead = read_from_socket(
+                      socket_id, checkBuffer + checkBytes,
+                      expectedCheckSize - checkBytes);
+                  if (bytesRead <= 0) {
+                    break;
+                  }
+                  checkBytes += static_cast<size_t>(bytesRead);
+                }
+                if (checkBytes != expectedCheckSize ||
+                    string(checkBuffer, checkBytes) != expectedCheck) {
+                  std::cerr << "Serwer nie potwierdzil gotowosci." << std::endl;
+                  disconnect_connection(socket_id);
+                  break;
+                }
+
                 string playerNick = nicknameTextBox.getText();
                 if (playerNick.empty()) {
                   playerNick = "Gracz";
@@ -177,15 +209,6 @@ int main() {
 
                 currentState = GameState::WAITING_ROOM;
                 nicknameTextBox.setActive(false);
-
-                // Odbior wylosowanej litery (serwer wysyla 1 znak bez \n)
-                char received_letter = '\0';
-                ssize_t bytes =
-                    read_from_socket(socket_id, &received_letter, 1);
-                if (bytes > 0) {
-                  gameLetter = received_letter;
-                  texts.at("Letter").setString(string(1, gameLetter));
-                }
 
                 // Uruchomienie watku nasluchujacego i wyslanie nicku
                 netClient.startListening(socket_id);
@@ -205,6 +228,7 @@ int main() {
         break;
 
       case GameState::WAITING_ROOM:
+
         if (const auto *mouseEvent =
                 event->getIf<sf::Event::MouseButtonPressed>()) {
           if (mouseEvent->button == sf::Mouse::Button::Left) {
@@ -213,11 +237,14 @@ int main() {
 
             // Klikniecie przycisku w poczekalni przechodzi do wlasciwej gry
             if (modules[0].getGlobalBounds().contains(mousePosF)) {
-              currentState = GameState::GAME;
+              currentState = GameState::WAITING_ROOM_READY;
               answerTextBox.setActive(true);
+              netClient.sendLine("READY");
             }
           }
         }
+        break;
+        case GameState::WAITING_ROOM_READY:
         break;
 
       case GameState::GAME:
@@ -292,6 +319,12 @@ int main() {
         label.draw(window);
       }
       window.draw(modules[0]);
+      break;
+    case GameState::WAITING_ROOM_READY:
+      window.draw(screens[1]);
+      for (const auto &label : playerLabels) {
+        label.draw(window);
+      }
       break;
     case GameState::GAME:
       window.draw(screens[2]);
