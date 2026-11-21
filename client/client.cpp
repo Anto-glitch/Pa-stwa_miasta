@@ -119,6 +119,11 @@ int main() {
         currentState = GameState::GAME;
         answerTextBox.setActive(true);
 
+      } else if (serverMsg.rfind("LETTER ", 0) == 0 &&
+                 serverMsg.size() == 8) {
+        gameLetter = serverMsg.back();
+        texts.at("Letter").setString(string(1, gameLetter));
+
       } else {
         // Nie wiem czy to potrzebne na tą chwilę ale zostawie do przemyslenia
         texts.at("Prompt").setString(serverMsg);
@@ -171,6 +176,26 @@ int main() {
               } else {
                 std::cout << "Polaczono z serwerem!" << std::endl;
 
+                constexpr char expectedCheck[] = "CHECK\n";
+                constexpr size_t expectedCheckSize = sizeof(expectedCheck) - 1;
+                char checkBuffer[expectedCheckSize];
+                size_t checkBytes = 0;
+                while (checkBytes < expectedCheckSize) {
+                  const ssize_t bytesRead = read_from_socket(
+                      socket_id, checkBuffer + checkBytes,
+                      expectedCheckSize - checkBytes);
+                  if (bytesRead <= 0) {
+                    break;
+                  }
+                  checkBytes += static_cast<size_t>(bytesRead);
+                }
+                if (checkBytes != expectedCheckSize ||
+                    string(checkBuffer, checkBytes) != expectedCheck) {
+                  std::cerr << "Serwer nie potwierdzil gotowosci." << std::endl;
+                  disconnect_connection(socket_id);
+                  break;
+                }
+
                 string playerNick = nicknameTextBox.getText();
                 if (playerNick.empty()) {
                   playerNick = "Gracz";
@@ -184,15 +209,6 @@ int main() {
 
                 currentState = GameState::WAITING_ROOM;
                 nicknameTextBox.setActive(false);
-
-                // Odbior wylosowanej litery (serwer wysyla 1 znak bez \n)
-                char received_letter = '\0';
-                ssize_t bytes =
-                    read_from_socket(socket_id, &received_letter, 1);
-                if (bytes > 0) {
-                  gameLetter = received_letter;
-                  texts.at("Letter").setString(string(1, gameLetter));
-                }
 
                 // Uruchomienie watku nasluchujacego i wyslanie nicku
                 netClient.startListening(socket_id);

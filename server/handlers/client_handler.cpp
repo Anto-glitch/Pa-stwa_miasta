@@ -12,9 +12,9 @@
 using namespace std;
 
 void handleClient(int clientId, vector<vector<string>> &messages,
-                  mutex &message_mutex, Gamestate &gameState, char random_letter,
+                  mutex &message_mutex, Gamestate &gameState,
                   vector<string> categories) {
-  write_to_socket(clientId, string(1, random_letter));
+  write_to_socket(clientId, "CHECK\n");
 
   string accumulated_text;
   string nickname;
@@ -37,8 +37,11 @@ void handleClient(int clientId, vector<vector<string>> &messages,
     return;
   }
   write_to_socket(clientId, "START\n");
+  write_to_socket(clientId,
+                  "LETTER " + string(1, gameState.random_letter) + "\n");
   vector<string> answers =
-      collectAnswers(clientId, accumulated_text, random_letter, categories);
+      collectAnswers(clientId, accumulated_text, gameState.random_letter,
+                     categories);
   saveAnswers(move(answers), nickname, messages, message_mutex);
   removePlayer(clientId, gameState);
   close_socket(clientId);

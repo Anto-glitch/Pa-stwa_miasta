@@ -24,9 +24,6 @@ using namespace std;
 
 int main(void) {
 
-  char random_letter = generateRandomChar();
-  cout << "Wylosowana litera: " << random_letter << endl;
-
   // wpisz wszystkie kategorie
   vector<string> categories = {"IMIE", "NAZWISKO", "MIASTO", "ROSLINA"};
 
@@ -37,6 +34,8 @@ int main(void) {
 
   Gamestate gameState;
   gameState.gameStarted = false;
+  gameState.random_letter = '\0';
+
   gameState.players = vector<Player>();
 
   vector<vector<string>> messages;
@@ -63,16 +62,27 @@ int main(void) {
     }
     clientIds.push_back(clientId);
     thread t1(handleClient, clientId, ref(messages), ref(message_mutex),
-              ref(gameState), random_letter, categories);
+              ref(gameState), categories);
     t1.detach();
     }  
     lock_guard<mutex> lock(gameState.m);
     if (!gameState.gameStarted) {
       int readyPlayers = count_if(gameState.players.begin(),gameState.players.end(),[](Player &p){return p.ready;});
       if(gameState.players.size()>=2 && readyPlayers == gameState.players.size()){ 
+        char next_letter;
+        do {
+          next_letter = generateRandomChar();
+        } while (next_letter == gameState.random_letter);
+        gameState.random_letter = next_letter;
+        cout << "Wylosowana litera: " << gameState.random_letter << endl;
         gameState.gameStarted = true;
       }
       continue;
+    }
+    if(gameState.gameStarted && gameState.players.empty()){
+      display_answers(messages);
+      messages.clear();
+      gameState.gameStarted = false;
     }
 
     

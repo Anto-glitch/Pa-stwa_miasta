@@ -35,7 +35,7 @@ ssize_t write_to_socket(int socket, const std::string& message, int flags) {
 
     const ssize_t bytes_written =
         send(socket, message.c_str(), message.length(), flags);
-    if (bytes_written == -1) {
+    if (bytes_written < message.length()) {
         perror("Write failed");
         return false;
     }
