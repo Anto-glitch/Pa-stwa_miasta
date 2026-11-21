@@ -68,13 +68,14 @@ int main(void) {
     lock_guard<mutex> lock(gameState.m);
     if (!gameState.gameStarted) {
       int readyPlayers = count_if(gameState.players.begin(),gameState.players.end(),[](Player &p){return p.ready;});
-      if(gameState.players.size()>=2 && readyPlayers == gameState.players.size()){ 
+      if(gameState.players.size()>=2 && readyPlayers*2 > gameState.players.size()){ 
         char next_letter;
         do {
           next_letter = generateRandomChar();
         } while (next_letter == gameState.random_letter);
         gameState.random_letter = next_letter;
         cout << "Wylosowana litera: " << gameState.random_letter << endl;
+        
         gameState.gameStarted = true;
       }
       continue;

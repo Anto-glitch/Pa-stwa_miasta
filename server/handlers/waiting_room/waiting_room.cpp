@@ -34,6 +34,15 @@ bool isGameStarted(Gamestate &gameState) {
 bool waitForGameStart(int clientId, std::string &accumulatedText,
                       Gamestate &gameState) {
   std::string ready;
+
+  // Sprawdź, czy gra już się rozpoczęła
+  {
+    std::lock_guard<std::mutex> lock(gameState.m);
+    if (gameState.gameStarted) {
+      return true;
+    }
+  }
+
   if (readLineFromSocket(clientId, accumulatedText, ready) !=
       ReadStatus::SUCCESS) {
     return false;
