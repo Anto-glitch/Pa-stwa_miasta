@@ -9,3 +9,4 @@ void display_answers(std::vector<std::vector<std::string>> &messages);
 
 std::string capitalize(std::string str);
 
+int counting_down(int seconds);

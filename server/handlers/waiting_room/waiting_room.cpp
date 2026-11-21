@@ -33,24 +33,9 @@ bool isGameStarted(Gamestate &gameState) {
 
 bool waitForGameStart(int clientId, std::string &accumulatedText,
                       Gamestate &gameState) {
-  std::string ready;
+  std::string ClientCommand;
 
-  // Sprawdź, czy gra już się rozpoczęła
-  {
-    std::lock_guard<std::mutex> lock(gameState.m);
-    if (gameState.gameStarted) {
-      return true;
-    }
-  }
-
-  if (readLineFromSocket(clientId, accumulatedText, ready) !=
-      ReadStatus::SUCCESS) {
-    return false;
-  }
-
-  if (ready != "READY" || !markPlayerReady(clientId, gameState)) {
-    return false;
-  }
+  // Na słuchuj na rozpoczęcie gry i jednoczesnie na  komendy od klienta
 
   pollfd pollDescriptor{clientId, POLLIN, 0};
   while (!isGameStarted(gameState)) {
@@ -65,10 +50,15 @@ bool waitForGameStart(int clientId, std::string &accumulatedText,
     }
     if (pollDescriptor.revents & POLLIN) {
       const ReadStatus status =
-          readLineFromSocket(clientId, accumulatedText, ready, 1);
+          readLineFromSocket(clientId, accumulatedText, ClientCommand, 1);
       if (status == ReadStatus::ERROR ||
-          (status == ReadStatus::SUCCESS && ready == "EXIT")) {
+          (status == ReadStatus::SUCCESS && ClientCommand == "EXIT")) {
         return false;
+      }
+      else if (status == ReadStatus::SUCCESS && ClientCommand == "READY") {
+        if (!markPlayerReady(clientId, gameState)) {
+          return false;
+        }
       }
     }
   }

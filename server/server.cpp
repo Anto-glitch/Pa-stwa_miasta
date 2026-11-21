@@ -75,7 +75,9 @@ int main(void) {
         } while (next_letter == gameState.random_letter);
         gameState.random_letter = next_letter;
         cout << "Wylosowana litera: " << gameState.random_letter << endl;
-        
+        thread t2(counting_down,5);
+        t2.join();
+        cout << "Gra rozpoczeta!" << endl;
         gameState.gameStarted = true;
       }
       continue;
