@@ -4,6 +4,11 @@ project(Panstwa_Miasta LANGUAGES CXX)
 add_executable(client
     client/client.cpp
     client/screens/generate_sprite.cpp
+    client/screens/start_screen.cpp
+    client/screens/waiting_room_screen.cpp
+    client/screens/game_screen.cpp
+    client/screens/election_screen.cpp
+    client/screens/results_screen.cpp
     client/screens/common/exit_button.cpp
     client/screens/common/cursor_interactions.cpp
     client/systems/socket_connection.cpp
@@ -11,7 +16,6 @@ add_executable(client
     client/utils/utils.cpp
     client/screens/common/create_text.cpp
     client/screens/common/textbox.h
-
 )
 
 add_executable(server
