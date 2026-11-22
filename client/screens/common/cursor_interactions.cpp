@@ -1,4 +1,3 @@
-
 #include "cursor.hpp"
 
 #include <SFML/Window.hpp>
@@ -6,8 +5,8 @@
 
 void handleCursorInteractions(
     sf::RenderWindow& window,
-    const std::vector<sf::Sprite>& buttons,
-    const TextBox& textBox,
+    const std::vector<const sf::Sprite*>& buttons,
+    const TextBox* textBox,
     const sf::Cursor& arrowCursor,
     const sf::Cursor& handCursor,
     const sf::Cursor& textCursor,
@@ -18,15 +17,16 @@ void handleCursorInteractions(
 
     CursorType nextCursor = CursorType::Arrow;
 
-    for (const auto& button : buttons) {
-        if (button.getGlobalBounds().contains(mousePosF)) {
+    for (const sf::Sprite* button : buttons) {
+        if (button != nullptr && button->getGlobalBounds().contains(mousePosF)) {
             nextCursor = CursorType::Hand;
             break;
         }
     }
 
     if (nextCursor == CursorType::Arrow &&
-        textBox.getGlobalBounds().contains(mousePosF)) {
+        textBox != nullptr &&
+        textBox->getGlobalBounds().contains(mousePosF)) {
         nextCursor = CursorType::Text;
     }
 
@@ -48,5 +48,3 @@ void handleCursorInteractions(
 
     currentCursor = nextCursor;
 }
-
-
