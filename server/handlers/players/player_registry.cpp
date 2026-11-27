@@ -21,7 +21,7 @@ bool registerPlayer(int clientId, std::string &nickname, Gamestate &gameState) {
     return false;
   }
 
-  gameState.players.push_back({clientId, nickname, false});
+  gameState.players.push_back({clientId, nickname, false, false, false, false});
   return true;
 }
 

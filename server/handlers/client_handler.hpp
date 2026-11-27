@@ -10,11 +10,21 @@ struct Player {
   int socket_id;
   string nickname;
   bool ready;
+  bool gameStarted;
+  bool timeNotified;
+  bool answersSubmitted;
+};
+
+enum class RoundState {
+  WAITING_FOR_PLAYERS,
+  GAME,
+  VOTING
 };
 
 struct Gamestate {
-  bool gameStarted;
+  RoundState roundState;
   char random_letter;
+  bool timerStarted;
   mutex m;
   vector<Player> players;
 };

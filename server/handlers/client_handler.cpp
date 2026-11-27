@@ -39,10 +39,37 @@ void handleClient(int clientId, vector<vector<string>> &messages,
   write_to_socket(clientId, "START\n");
   write_to_socket(clientId,
                   "LETTER " + string(1, gameState.random_letter) + "\n");
+
+  bool sendTime = false;
+  {
+    lock_guard<mutex> lock(gameState.m);
+    for (Player &player : gameState.players) {
+      if (player.socket_id == clientId) {
+        player.gameStarted = true;
+        if (gameState.timerStarted && !player.timeNotified) {
+          player.timeNotified = true;
+          sendTime = true;
+        }
+        break;
+      }
+    }
+  }
+  if (sendTime) {
+    write_to_socket(clientId, "TIME\n");
+  }
+
   vector<string> answers =
       collectAnswers(clientId, accumulated_text, gameState.random_letter,
-                     categories);
+                     categories, gameState);
   saveAnswers(move(answers), nickname, messages, message_mutex);
-  removePlayer(clientId, gameState);
-  close_socket(clientId);
+
+  {
+    lock_guard<mutex> lock(gameState.m);
+    for (Player &player : gameState.players) {
+      if (player.socket_id == clientId) {
+        player.answersSubmitted = true;
+        break;
+      }
+    }
+  }
 }

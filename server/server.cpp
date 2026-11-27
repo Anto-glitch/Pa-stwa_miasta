@@ -16,7 +16,6 @@
 #include <thread>
 #include <unistd.h>
 #include <vector>
-#include <condition_variable>
 #include <algorithm>
 #include <chrono>
 #include <poll.h>
@@ -34,8 +33,9 @@ int main(void) {
   }
 
   Gamestate gameState;
-  gameState.gameStarted = false;
+  gameState.roundState = RoundState::WAITING_FOR_PLAYERS;
   gameState.random_letter = '\0';
+  gameState.timerStarted = false;
 
   gameState.players = vector<Player>();
 
@@ -70,9 +70,12 @@ int main(void) {
     thread t1(handleClient, clientId, ref(messages), ref(message_mutex),
               ref(gameState), categories);
     t1.detach();
-    }  
-    lock_guard<mutex> lock(gameState.m);
-    if (!gameState.gameStarted) {
+    } 
+    
+    //WAITING ROOM WITH COUNTING READY PLAYERS 
+    //TODO PUT ALL THIS INTO SEPARATE FUNCT
+    unique_lock<mutex> lock(gameState.m);
+    if (gameState.roundState == RoundState::WAITING_FOR_PLAYERS) {
       const size_t totalPlayers = gameState.players.size();
       const size_t readyPlayers = static_cast<size_t>(
           count_if(gameState.players.begin(), gameState.players.end(),
@@ -106,7 +109,7 @@ int main(void) {
           gameState.random_letter = next_letter;
           cout << "Wylosowana litera: " << gameState.random_letter << endl;
           cout << "Gra rozpoczeta!" << endl;
-          gameState.gameStarted = true;
+          gameState.roundState = RoundState::GAME;
           isCountingDown = false;
           lastPrintedSecond = -1;
         }
@@ -118,13 +121,38 @@ int main(void) {
       }
       continue;
     }
-    if(gameState.gameStarted && gameState.players.empty()){
-      display_answers(messages);
-      messages.clear();
-      gameState.gameStarted = false;
-    }
+    if (gameState.roundState == RoundState::GAME &&
+        !gameState.players.empty() &&
+        any_of(gameState.players.begin(), gameState.players.end(),
+               [](const Player &player) { return player.answersSubmitted; })) {
+      gameState.timerStarted = true;
+      for (Player &player : gameState.players) {
+        if (player.gameStarted && !player.timeNotified) {
+          write_to_socket(player.socket_id, "TIME\n");
+          player.timeNotified = true;
+        }
+      }
 
-    
+      thread counter([] { counting_down(30); });
+      lock.unlock();
+      counter.join();
+      lock.lock();
+
+      gameState.roundState = RoundState::VOTING;
+    }
+    if (gameState.roundState == RoundState::VOTING &&
+        !gameState.players.empty() &&
+        all_of(gameState.players.begin(), gameState.players.end(),
+               [](const Player &player) { return player.answersSubmitted; })) {
+      display_answers(messages);
+     
+     //there i close evertyhing but it until we do not add the rest of the logic
+      messages.clear();
+      for (const Player &player : gameState.players) {
+        close_socket(player.socket_id);
+      }
+      gameState.players.clear();
+    }
   }
   close_socket(serverId);
 

@@ -26,7 +26,7 @@ bool markPlayerReady(int clientId, Gamestate &gameState) {
 
 bool isGameStarted(Gamestate &gameState) {
   std::lock_guard<std::mutex> lock(gameState.m);
-  return gameState.gameStarted;
+  return gameState.roundState == RoundState::GAME;
 }
 
 }

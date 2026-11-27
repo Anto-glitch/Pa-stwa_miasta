@@ -8,19 +8,39 @@
 
 std::vector<std::string> collectAnswers(
     int clientId, std::string &accumulatedText, char randomLetter,
-    const std::vector<std::string> &categories) {
+    const std::vector<std::string> &categories, Gamestate &gameState) {
   std::vector<std::string> answers;
   std::size_t categoryIndex = 0;
+  const auto votingStarted = [&gameState] {
+    std::lock_guard<std::mutex> lock(gameState.m);
+    return gameState.roundState == RoundState::VOTING;
+  };
+
+  if (categories.empty()) {
+    return answers;
+  }
 
   while (categoryIndex < categories.size()) {
+    if (votingStarted()) {
+      break;
+    }
+
     const std::string prompt =
-        "Podaj " + categories[categoryIndex] + " (kazde zatwierdz enterem):\n";
+        "Podaj " + categories[categoryIndex] +
+        " (kazde zatwierdz enterem):\n";
     write_to_socket(clientId, prompt);
 
     std::string line;
-    if (readLineFromSocket(clientId, accumulatedText, line) !=
-            ReadStatus::SUCCESS ||
-        line == "EXIT") {
+    const ReadStatus status =
+        readLineFromSocket(clientId, accumulatedText, line, 1);
+    if (status == ReadStatus::ERROR ||
+        (status == ReadStatus::SUCCESS && line == "EXIT")) {
+      break;
+    }
+    if (status != ReadStatus::SUCCESS) {
+      continue;
+    }
+    if (votingStarted()) {
       break;
     }
 
@@ -32,7 +52,7 @@ std::vector<std::string> collectAnswers(
     answers.push_back(line);
     ++categoryIndex;
   }
-
+  write_to_socket(clientId,"RESULTS");
   return answers;
 }
 
