@@ -13,6 +13,7 @@ struct Player {
   bool gameStarted;
   bool timeNotified;
   bool answersSubmitted;
+  double answerTime=0;
 };
 
 enum class RoundState {

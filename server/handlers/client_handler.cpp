@@ -1,6 +1,8 @@
 #include "client_handler.hpp"
 
 #include <thread>
+#include<chrono>
+#include <algorithm>
 
 #include "answers/answer_handler.hpp"
 #include "io/read_line.hpp"
@@ -57,10 +59,21 @@ void handleClient(int clientId, vector<vector<string>> &messages,
   if (sendTime) {
     write_to_socket(clientId, "TIME\n");
   }
-
+  auto start = chrono::steady_clock::now();
   vector<string> answers =
       collectAnswers(clientId, accumulated_text, gameState.random_letter,
                      categories, gameState);
+  auto end = chrono::steady_clock::now();
+  chrono::duration<double> elapsed_seconds = end - start;
+  {
+    lock_guard<mutex> lock(gameState.m);
+    for (Player &player : gameState.players) {
+      if (player.socket_id == clientId) {
+        player.answerTime = elapsed_seconds.count(); 
+        break;
+      }
+    }
+  }
   saveAnswers(move(answers), nickname, messages, message_mutex);
 
   {

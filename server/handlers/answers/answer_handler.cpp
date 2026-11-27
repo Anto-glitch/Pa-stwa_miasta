@@ -11,6 +11,7 @@ std::vector<std::string> collectAnswers(
     const std::vector<std::string> &categories, Gamestate &gameState) {
   std::vector<std::string> answers;
   std::size_t categoryIndex = 0;
+
   const auto votingStarted = [&gameState] {
     std::lock_guard<std::mutex> lock(gameState.m);
     return gameState.roundState == RoundState::VOTING;
